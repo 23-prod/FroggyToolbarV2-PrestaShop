@@ -1,0 +1,12 @@
+{
+	"tab" : "front_office_features",
+	"version": "1.0.0",
+	"need_instance": 0,
+
+	"hooks": { "all" : [ "Footer", "BackOfficeHeader", "Header" ] },
+
+	"configurations" : {
+        "FC_TLB_ADMIN_DIR" : "",
+		"FC_TLB_TARGET_LINK" : ""
+	}
+}

@@ -1,0 +1,150 @@
+/**
+ * 2013-2014 Froggy Commerce
+ *
+ * NOTICE OF LICENSE
+ *
+ * You should have received a licence with this module.
+ * If you didn't buy this module on Froggy-Commerce.com, ThemeForest.net
+ * or Addons.PrestaShop.com, please contact us immediately : contact@froggy-commerce.com
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to benefit the updates
+ * for newer PrestaShop versions in the future. If you wish to customize PrestaShop for your
+ * needs please refer to http://www.prestashop.com for more information.
+ *
+ * @author    Froggy Commerce <contact@froggy-commerce.com>
+ * @copyright 2013-2014 Froggy Commerce
+ * @license   Unauthorized copying of this file, via any medium is strictly prohibited
+ */
+
+/*Froggy Tool Bar*/
+html{margin-top:30px!important}
+#froggy-toolbar{position:fixed;top:0;left:0;z-index:99999999;width:100%;height:36px;color:#dedede;font-size:12px;background:#222222;font-family:arial, sans-serif}
+#froggy-toolbar a{color:#dadada!important;text-shadow:0 0 0 transparent!important;font-weight:normal!important}
+#froggy-toolbar a:hover{text-decoration:none}
+#froggy-toolbar li{padding:0}
+#froggy-toolbar li a{color:#b5b5b5;font-weight:normal;text-shadow:0 0 0 transparent}
+#froggy-toolbar li a:hover{color:#fff}
+#froggy-toolbar li a:visited{text-decoration:none!important}
+/*Froggy Tool Bar*/
+
+
+
+/*List link*/
+#froggy-toolbar .fc-toolbar-list-link{height:36px;float:left}
+#froggy-toolbar .fc-toolbar-list-link li.toolbar-link{line-height:36px;height:36px;margin:0;padding:0;float:left}
+#froggy-toolbar .fc-toolbar-list-link li:hover{background:#090909}
+#froggy-toolbar .fc-toolbar-list-link li.toolbar-link>a{display:block;height:100%;padding:0 12px}
+#froggy-toolbar .fc-toolbar-list-link li a .fc-toolbar-icon-plus{display:inline-block;width:12px;height:12px;margin:10px 6px 0 0;background:url(../img/sprite-fc-toolbar.png) 0 0;float:left}
+#froggy-toolbar .fc-toolbar-list-link li .froggy-toolbar-link{display:inline-block;width:16px;height:14px;margin:10px 0 0 0;background:url( 'http://media.froggy-commerce.com/fc-toolbar-logo.png' );float:left}
+/*Menu*/
+#froggy-toolbar .fc-toolbar-submenu{display:none;background:#fff;position:absolute;box-shadow:0 6px 12px rgba(0, 0, 0, 0.176)}
+#froggy-toolbar .fc-toolbar-submenu a{font-weight:normal;color:#333!important}
+#froggy-toolbar .fc-toolbar-submenu li:hover{background:#00AFF0}
+#froggy-toolbar .fc-toolbar-submenu li:hover a{color:#fff!important}
+#froggy-toolbar .first-floor:hover .fc-toolbar-submenu{display:block}
+#froggy-toolbar .first-floor:hover .fc-toolbar-submenu li{height:30px;line-height:30px;padding:0;margin:0}
+#froggy-toolbar .first-floor:hover .fc-toolbar-submenu li a{display:block;height:100%;color:#333;padding:0 12px}
+
+/*Menu*/
+
+/*edit*/
+
+
+#froggy-toolbar .fc-toolbar-list-link li a .fc-toolbar-edit-page{display:inline-block;width:12px;height:13px;margin:10px 6px 0 0;background:url(../img/sprite-fc-toolbar.png) 0 -14px;float:left}
+
+/*edit*/
+
+/*back office link*/
+
+#froggy-toolbar .fc-toolbar-list-link li a .fc-toolbar-backoffice{display:inline-block;width:20px;height:13px;margin:10px 6px 0 0;background:url(../img/sprite-fc-toolbar.png) 0 -43px;float:left}
+
+/*back office link*/
+
+
+/*List link*/
+
+
+
+/*action Box*/
+
+#froggy-toolbar .fc-toolbar-box{height:36px;float:right}
+#froggy-toolbar .fc-toolbar-box li.display-box{height:36px;line-height:36px;margin:0;padding:0}
+#froggy-toolbar .fc-toolbar-box li.display-box.giant{position:relative}
+#froggy-toolbar .fc-toolbar-box li.display-box.giant .fc-box-content{width:270px;background:#fff;color:#333;box-shadow:0 6px 12px rgba(0, 0, 0, 0.176)}
+#froggy-toolbar .fc-toolbar-box li.display-box:hover{background:#090909}
+#froggy-toolbar .fc-toolbar-box li.display-box>a{height:100%;padding:0 12px;display:block}
+#froggy-toolbar .fc-toolbar-box .fc-box-content{display:none;position:absolute;right:0;border-radius:0 0 4px 4px}
+#froggy-toolbar .fc-toolbar-box .fc-box-content a{color:#333}
+#froggy-toolbar .fc-toolbar-box .display-box:hover .fc-box-content{display:block}
+#froggy-toolbar .fc-toolbar-box>li{padding:0;height:30px;line-height:30px;float:left}
+#froggy-toolbar .fc-toolbar-box li:hover{background:#4C545D}
+#froggy-toolbar .fc-toolbar-box li a{display:block;padding:0 12px}
+#froggy-toolbar .fc-toolbar-box li.display-box.fc-toolbar-notification>a{padding-right:21px!important}
+#froggy-toolbar .fc-toolbar-box li.display-box a .fc-toolbar-notification-number{display:none}
+#froggy-toolbar .fc-toolbar-box li.display-box.fc-toolbar-notification a .fc-toolbar-notification-number{display:block;color:#fff;font-size:10px;position:absolute;top:-7px;right:-17px;line-height:12px;border-radius:10px;background:#00AFF0;letter-spacing:0.0625em;padding:2px}
+#froggy-toolbar .fc-toolbar-box li .fc-toolbar-title-info{display:block;font-size:13px;line-height:24px;color:#333;border-bottom:1px solid #DEDEDE;margin:0 12px}
+#froggy-toolbar .fc-toolbar-box li.display-box.giant ul{padding-bottom:5px}
+#froggy-toolbar .fc-toolbar-box li li.fc-toolbar-client-info{padding:0 12px}
+#froggy-toolbar .fc-toolbar-box li li.fc-toolbar-client-info a{color:#333!important}
+#froggy-toolbar .fc-toolbar-box li li.fc-toolbar-client-info:hover{background:#00AFF0;color:#fff}
+#froggy-toolbar .fc-toolbar-box li li.fc-toolbar-client-info:hover a{color:#fff!important}
+#froggy-toolbar .fc-toolbar-box .footer-toolbar-box{width:246px;display:block;margin:0 12px;border-top:1px solid #DEDEDE;float:left}
+#froggy-toolbar p.footer-toolbar-box .fc-toolbar-seeall-link{color:#333!important;padding:0;float:right}
+#froggy-toolbar p.footer-toolbar-box .fc-toolbar-seeall-link:hover{color:#00AFF0!important}
+#froggy-toolbar .fc-toolbar-box li .fc-toolbar-client-info{line-height:24px}
+#froggy-toolbar .fc-toolbar-box li .fc-toolbar-client-name{font-size:13px}
+#froggy-toolbar .fc-toolbar-box li .fc-toolbar-client-link{padding:0;float:right}
+#froggy-toolbar .fc-toolbar-noti-label{margin:8px 12px 0;line-height:20px}
+
+/*Client box*/
+#froggy-toolbar .fc-toolbar-box li a .fc-toolbar-icon-clients{display:inline-block;position:relative;width:16px;height:12px;margin:10px 0 0 0;background:url(../img/sprite-fc-toolbar.png) 0 -57px;float:left}
+
+/*Client box*/
+
+/*Client message*/
+
+#froggy-toolbar .fc-toolbar-box li a .fc-toolbar-icon-message{display:inline-block;position:relative;width:16px;height:14px;margin:10px 0 0 0;background:url(../img/sprite-fc-toolbar.png) 0 -29px;float:left}
+/*Client message*/
+
+/*new order*/
+
+#froggy-toolbar .fc-toolbar-box li a .fc-toolbar-icon-order{display:inline-block;position:relative;width:15px;height:13px;margin:10px 0 0 0;background:url(../img/sprite-fc-toolbar.png) 0 -71px;float:left}
+
+
+/*new order*/
+
+/*account link*/
+#fc-toolbar-account-link li{padding-bottom:0!important}
+#froggy-toolbar #fc-toolbar-account-link .fc-box-content{border-radius:0;background:#fff;box-shadow:0 6px 12px rgba(0, 0, 0, 0.176)}
+#froggy-toolbar #fc-toolbar-account-link .fc-box-content li{height:30px;line-height:30px}
+#froggy-toolbar #fc-toolbar-account-link .fc-box-content li:hover{background:#00AFF0}
+#froggy-toolbar #fc-toolbar-account-link .fc-box-content a{color:#333!important}
+#froggy-toolbar #fc-toolbar-account-link .fc-box-content a:hover{color:#fff!important}
+/*account link*/
+
+/*action Box*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
