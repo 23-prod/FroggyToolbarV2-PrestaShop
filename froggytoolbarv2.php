@@ -34,8 +34,8 @@ class FroggyToolbarV2 extends FroggyModule
 	{
 		parent::__construct();
 
-		$this->displayName = $this->l('Froggy Toolbar V2');
-		$this->description = $this->l('Display an admin toolbar on front office');
+		$this->displayName = $this->l('Froggy Advanced Toolbar');
+		$this->description = $this->l('Display an admin advanced toolbar on front office');
 	}
 
 

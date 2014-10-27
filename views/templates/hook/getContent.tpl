@@ -19,9 +19,9 @@
  *}
 
 <fieldset id="froggytoolbar_fieldset">
-	<legend><img src="{$froggytoolbar.module_dir}logo.png" alt="" width="16" />{l s='Froggy Toolbar' mod='froggytoolbar'}</legend>
+	<legend><img src="{$froggytoolbarv2.module_dir}logo.png" alt="" width="16" />{l s='Froggy Advanced Toolbar' mod='froggytoolbar'}</legend>
 
-    {if $froggytoolbar.result eq 'OK'}
+    {if $froggytoolbarv2.result eq 'OK'}
         <div class="conf confirm">{l s='The new configuration has been saved!' mod='froggytoolbar'}</div>
     {/if}
 
@@ -31,12 +31,12 @@
             <label>{l s='Open link:' mod='froggytoolbar'}</label>
             <div class="margin-form">
                 <select name="FC_TLB_TARGET_LINK">
-                    <option value="" {if $froggytoolbar.target_link eq ''}selected="selected"{/if}>{l s='In the same page' mod='froggytoolbar'}</option>
-                    <option value="_blank" {if $froggytoolbar.target_link eq '_blank'}selected="selected"{/if}>{l s='In a new page' mod='froggytoolbar'}</option>
+                    <option value="" {if $froggytoolbarv2.target_link eq ''}selected="selected"{/if}>{l s='In the same page' mod='froggytoolbar'}</option>
+                    <option value="_blank" {if $froggytoolbarv2.target_link eq '_blank'}selected="selected"{/if}>{l s='In a new page' mod='froggytoolbar'}</option>
                 </select>
             </div>
             <label>{l s='Notifications refresh each:' mod='froggytoolbar'}</label>
-            <div class="margin-form"><input type="text" name="FC_TLB_TIMER" value="{$froggytoolbar.timer / 1000}" /> s</div>
+            <div class="margin-form"><input type="text" name="FC_TLB_TIMER" value="{$froggytoolbarv2.timer / 1000}" /> s</div>
             <p>{l s='Refresh timer must be upper than 15s' mod='froggytoolbar'}</p>
             <label><input type="submit" value="{l s='Save' mod='froggytoolbar'}" name="froggytoolbar_ft_form" class="button" /></label>
         </form>
