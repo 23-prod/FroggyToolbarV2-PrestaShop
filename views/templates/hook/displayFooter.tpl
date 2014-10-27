@@ -58,6 +58,15 @@
                 </a>
             </li>
         {/if}
+        {if isset($froggytoolbarv2.modules_displayed) && $froggytoolbarv2.modules_displayed|@count gt 0}
+			<li class="modules-configuration first-floor toolbar-link"><a href="#"><span class="fc-toolbar-icon-plus"></span><span>{l s='Modules configuration' mod='froggytoolbar'}</span></a>
+				<ul class="fc-toolbar-submenu">
+                    {foreach from=$froggytoolbarv2.modules_displayed item=module}
+					    <li><a {$froggytoolbarv2.target_link}href="{$base_dir}{$module.configuration_link}">{if !empty($module.display_name)}{$module.display_name}{else}{$module.name}{/if}</a></li>
+                    {/foreach}
+				</ul>
+			</li>
+        {/if}
 	</ul>
 	<ul class="fc-toolbar-box">
 		<li class="display-box giant fc-toolbar-notification fc-toolbar-new-order" id="fc-toolbar-orders-notification-box">

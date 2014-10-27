@@ -47,6 +47,7 @@ class FroggyToolbarV2HookDisplayFooterProcessor extends FroggyHookProcessor
 			'admin_dir' => Configuration::get('FC_TLB_ADMIN_DIR'),
 			'timer' => Configuration::get('FC_TLB_TIMER'),
 			'ps_version' => substr(_PS_VERSION_, 0, 3),
+			'modules_displayed' => Module::$modules_displayed,
 		);
 
 		$this->smarty->assign($this->module->name, $assign);
