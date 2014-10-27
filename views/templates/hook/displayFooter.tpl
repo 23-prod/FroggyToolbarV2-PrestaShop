@@ -118,12 +118,12 @@
 	<h1>{l s='Froggy Toolbar Debug Mode' mod='froggytoolbarv2'}<span><img src="{$base_dir}modules/froggytoolbarv2/views/img/drag-arrow.png" class="froggytoolbar-debug-arrow-drag" id="froggytoolbar-debug-drag" /></span></h1>
 	<fieldset>
 		<legend>{l s='Border color' mod='froggytoolbarv2'}</legend>
-		<label><input type="text" class="color" value="FF0000" id="froggytoolbar-debug-border-color" onchange="GoldDebug.changeOptions()" /></label>
+		<label><input type="text" class="color" value="FF0000" id="froggytoolbar-debug-border-color" /></label>
 	</fieldset>
 	<fieldset>
 		<legend>{l s='Border style' mod='froggytoolbarv2'}</legend>
 		<label>
-			<select id="froggytoolbar-debug-border-style" onchange="GoldDebug.changeOptions()">
+			<select id="froggytoolbar-debug-border-style">
 				<option>solid</option>
 				<option>none</option>
 				<option>dotted</option>
@@ -162,4 +162,5 @@
 	var froggytoolbar_debug_box = '{$froggytoolbar_debug_output|escape:'javascript' nofilter}';
 	var froggytoolbar_debug_enable_label = '{l s='Enable debug option' mod='froggytoolbarv2'}';
 	var froggytoolbar_debug_disable_label = '{l s='Disable debug option' mod='froggytoolbarv2'}';
+    var froggytoolbar_pictures_directory = ' {$base_dir}modules/froggytoolbarv2/views/img/';
 </script>

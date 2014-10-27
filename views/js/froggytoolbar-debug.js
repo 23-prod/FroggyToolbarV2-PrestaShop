@@ -23,15 +23,22 @@ $(document).ready(function() {
 	// Add the debug box code to the page
 	$('body').prepend(froggytoolbar_debug_box);
 
-	// Set registered position to the debug box
-	$('#froggytoolbar-debug-container').css('top', froggy_cookie.read('top') + 'px');
-	$('#froggytoolbar-debug-container').css('left', froggy_cookie.read('left') + 'px');
+	// Load JS Color library
+	jscolor.dir = froggytoolbar_pictures_directory;
+	jscolor.install();
+
+	// Load and save configuration
+	loadDebugBoxConfiguration();
+	$('#froggytoolbar-debug-border-color').change(function() {
+		saveDebugBoxConfiguration();
+	});
+	$('#froggytoolbar-debug-border-style').change(function() {
+		saveDebugBoxConfiguration();
+	});
 
 	// Set the debug box draggable
 	new dragObject('froggytoolbar-debug-container', 'froggytoolbar-debug-drag', null, null, null, null, function(){
-		var position = $('#froggytoolbar-debug-container').position();
-		froggy_cookie.write('left', position.left);
-		froggy_cookie.write('top', position.top);
+		saveDebugBoxConfiguration();
 	});
 
 	// Display debug box depending of the employee configuration
@@ -46,7 +53,32 @@ $(document).ready(function() {
 			switchDebugBoxDisplay(1);
 		return false;
 	});
+
 });
+
+function loadDebugBoxConfiguration()
+{
+	if (froggy_cookie.read('top') != '')
+		$('#froggytoolbar-debug-container').css('top', froggy_cookie.read('top') + 'px');
+	if (froggy_cookie.read('left') != '')
+		$('#froggytoolbar-debug-container').css('left', froggy_cookie.read('left') + 'px');
+	if (froggy_cookie.read('color') != '')
+		$('#froggytoolbar-debug-border-color').val(froggy_cookie.read('color'));
+	if (froggy_cookie.read('style') != '')
+		$('#froggytoolbar-debug-border-style').val(froggy_cookie.read('style'));
+	switchDebugBoxDisplay(froggy_cookie.read('enable'));
+}
+
+function saveDebugBoxConfiguration()
+{
+	// Set registered position to the debug box
+	var position = $('#froggytoolbar-debug-container').position();
+	froggy_cookie.write('left', position.left);
+	froggy_cookie.write('top', position.top);
+	froggy_cookie.write('color', $('#froggytoolbar-debug-border-color').val());
+	froggy_cookie.write('style', $('#froggytoolbar-debug-border-style').val());
+	loadDebugBoxConfiguration();
+}
 
 
 function switchDebugBoxDisplay(action)
