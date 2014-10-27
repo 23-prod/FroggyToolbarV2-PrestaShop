@@ -21,6 +21,8 @@
 
 class Module extends ModuleCore
 {
+	public static $modules_displayed = array();
+
 	public function display($file, $template, $cacheId = null, $compileId = null)
 	{
 		$result = parent::display($file, $template, $cacheId, $compileId);
@@ -32,7 +34,16 @@ class Module extends ModuleCore
 
 			// Check cookie employee
 			if ((int)$cookie_fc->id_employee > 0)
-				$result = '<section class="froggytoolbar-debug"><span class="froggytoolbar-tplname">'.$this->name.' / '.$template.'</span>'.$result.'</section>';
+			{
+				$configuration_link = '';
+				if (method_exists($this, 'getContent'))
+				{
+					$token = Tools::getAdminToken('AdminModules'.(int)Tab::getIdFromClassName('AdminModules').(int)$cookie_fc->id_employee);
+					$configuration_link = Configuration::get('FC_TLB_ADMIN_DIR').'index.php?controller=AdminModules&token='.$token.'&configure='.$this->name.'&module_name='.$this->name;
+					Module::$modules_displayed[$this->name] = $configuration_link;
+				}
+				$result = '<section class="froggytoolbar-debug"><span class="froggytoolbar-tplname">'.$this->name.' / '.$template.($configuration_link != '' ? ' <a href="'.$configuration_link.'">Configuration</a>' : '').'</span>'.$result.'</section>';
+			}
 		}
 
 		return $result;
