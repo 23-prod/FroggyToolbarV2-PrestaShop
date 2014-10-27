@@ -39,6 +39,7 @@ class FroggyToolbarV2HookDisplayHeaderProcessor extends FroggyHookProcessor
 		$this->context->controller->addCSS($this->path.'views/css/froggytoolbar-debug.css', 'all');
 		$this->context->controller->addCSS($this->path.'views/css/froggytoolbar-'.$ps_version.'.css', 'all');
 		$this->context->controller->addCSS($this->path.'views/css/froggytoolbar-'.$ps_version.'-'.$cookie_fc->bo_theme_employee.'.css', 'all');
+		$this->context->controller->addJS($this->path.'views/js/froggytoolbar-debug.js');
 		$this->context->controller->addJS($this->path.'views/js/froggytoolbar.js');
 	}
 }
