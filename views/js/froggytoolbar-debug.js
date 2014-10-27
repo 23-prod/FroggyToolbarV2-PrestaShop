@@ -20,19 +20,53 @@
 
 $(document).ready(function() {
 
-	var top     = froggy_cookie.read('top');
-	var left    = froggy_cookie.read('left');
-	jQuery('#froggytoolbar-debug-container').css('top', top + 'px');
-	jQuery('#froggytoolbar-debug-container').css('left', left + 'px');
+	// Add the debug box code to the page
+	$('body').prepend(froggytoolbar_debug_box);
 
+	// Set registered position to the debug box
+	$('#froggytoolbar-debug-container').css('top', froggy_cookie.read('top') + 'px');
+	$('#froggytoolbar-debug-container').css('left', froggy_cookie.read('left') + 'px');
+
+	// Set the debug box draggable
 	new dragObject('froggytoolbar-debug-container', 'froggytoolbar-debug-drag', null, null, null, null, function(){
-		var position = jQuery('#froggytoolbar-debug-container').position();
+		var position = $('#froggytoolbar-debug-container').position();
 		froggy_cookie.write('left', position.left);
 		froggy_cookie.write('top', position.top);
+	});
+
+	// Display debug box depending of the employee configuration
+	if (froggy_cookie.read('enable') == 1)
+		switchDebugBoxDisplay(1);
+
+	// Switch debug box display when button is triggered
+	$('#froggytoolbar-debug-option').click(function() {
+		if ($('#froggytoolbar-debug-container').is(':visible'))
+			switchDebugBoxDisplay(0);
+		else
+			switchDebugBoxDisplay(1);
+		return false;
 	});
 });
 
 
+function switchDebugBoxDisplay(action)
+{
+	if (action == 0)
+	{
+		$('#froggytoolbar-debug-container').fadeOut();
+		$('#froggytoolbar-debug-button-label').text(froggytoolbar_debug_enable_label);
+		$('.froggytoolbar-debug-module-name').fadeOut();
+		$('.froggytoolbar-debug-module-block').css('border', '0px');
+	}
+	else
+	{
+		$('#froggytoolbar-debug-container').fadeIn();
+		$('#froggytoolbar-debug-button-label').text(froggytoolbar_debug_disable_label);
+		$('.froggytoolbar-debug-module-name').fadeIn();
+		$('.froggytoolbar-debug-module-block').css('border', '1px ' + $('#froggytoolbar-debug-border-style').val() + ' #' + $('#froggytoolbar-debug-border-color').val());
+	}
+	froggy_cookie.write('enable', action);
+}
 
 
 

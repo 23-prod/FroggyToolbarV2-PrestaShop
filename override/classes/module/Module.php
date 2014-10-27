@@ -42,7 +42,7 @@ class Module extends ModuleCore
 					$configuration_link = Configuration::get('FC_TLB_ADMIN_DIR').'index.php?controller=AdminModules&token='.$token.'&configure='.$this->name.'&module_name='.$this->name;
 					Module::$modules_displayed[$this->name] = array('name' => $this->name, 'display_name' => $this->displayName, 'configuration_link' => $configuration_link);
 				}
-				$result = '<section class="froggytoolbar-debug"><span class="froggytoolbar-tplname">'.$this->name.' / '.$template.($configuration_link != '' ? ' <a href="'.$configuration_link.'">Configuration</a>' : '').'</span>'.$result.'</section>';
+				$result = '<section class="froggytoolbar-debug-module-block"><span class="froggytoolbar-debug-module-name">'.$this->name.' / '.$template.($configuration_link != '' ? ' <a href="'.$configuration_link.'">Configuration</a>' : '').'</span>'.$result.'</section>';
 			}
 		}
 

@@ -67,6 +67,7 @@
 				</ul>
 			</li>
         {/if}
+		<li class="first-floor toolbar-link"><a href="#" id="froggytoolbar-debug-option"><span class="fc-toolbar-icon-plus"></span><span id="froggytoolbar-debug-button-label">{l s='Enable debug option' mod='froggytoolbarv2'}</span></a></li>
 	</ul>
 	<ul class="fc-toolbar-box">
 		<li class="display-box giant fc-toolbar-notification fc-toolbar-new-order" id="fc-toolbar-orders-notification-box">
@@ -159,5 +160,6 @@
     var froggytoolbar_messages_url = '{$base_dir}{$froggytoolbarv2.admin_dir}{FroggyGetAdminLink a='AdminCustomerThreads' e=$froggytoolbarv2.id_employee}';
 
 	var froggytoolbar_debug_box = '{$froggytoolbar_debug_output|escape:'javascript' nofilter}';
-	jQuery('body').prepend(froggytoolbar_debug_box);
+	var froggytoolbar_debug_enable_label = '{l s='Enable debug option' mod='froggytoolbarv2'}';
+	var froggytoolbar_debug_disable_label = '{l s='Disable debug option' mod='froggytoolbarv2'}';
 </script>

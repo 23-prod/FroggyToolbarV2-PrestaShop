@@ -1,4 +1,4 @@
-.froggytoolbar-debug-container{padding:10px;font-family:sans-serif;color:#000;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;background:rgba(235, 235, 235, 0.8);-webkit-box-shadow:#777 0px 0px 3px;-moz-box-shadow:#777 0px 0px 3px;box-shadow:#777 0px 0px 3px;display:inline-block;position:absolute;left:10px;top:10px;z-index:999999999}
+.froggytoolbar-debug-container{padding:10px;font-family:sans-serif;color:#000;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;background:rgba(235, 235, 235, 0.8);-webkit-box-shadow:#777 0px 0px 3px;-moz-box-shadow:#777 0px 0px 3px;box-shadow:#777 0px 0px 3px;display:inline-block;position:absolute;left:10px;top:10px;z-index:999999999;display:none}
 .froggytoolbar-debug-container h1{height:16px;font-size:14px;margin:0;font-weight:normal;display:block}
 .froggytoolbar-debug-container h1 img{cursor:move}
 .froggytoolbar-debug-container fieldset{border:none;margin:10px 0 0;padding:0;font-size:12px}
@@ -12,4 +12,4 @@
 .froggytoolbar-debug-container button.froggytoolbar-debug-button {font-family:sans-serif;font-size: 14px;color: #5e5e5e;padding: 10px 20px;background: -moz-linear-gradient(top,#ebebeb 0%,#f2f2f2 25%,#d1d1d1);background: -webkit-gradient(linear, left top, left bottom, from(#ebebeb),color-stop(0.25, #f2f2f2),to(#d1d1d1));border-radius: 6px;-moz-border-radius: 6px;-webkit-border-radius: 6px;border: 1px solid #b3b3b3;-moz-box-shadow:0px 1px 3px rgba(000,000,000,0.5),inset 0px -1px 0px rgba(199,199,199,0.7);-webkit-box-shadow:0px 1px 3px rgba(000,000,000,0.5),inset 0px -1px 0px rgba(199,199,199,0.7);text-shadow:0px -1px 1px rgba(000,000,000,0.2),0px 1px 0px rgba(255,255,255,0.3);}
 .froggytoolbar-debug-container button.froggytoolbar-debug-button:hover{cursor:pointer}
 .froggytoolbar-debug-container button.froggytoolbar-debug-button:active{font-style:italic}
-.froggytoolbar-tplname{position:relative;left:0;top:0;display:none}
+.froggytoolbar-debug-module-name{position:relative;left:0;top:0;display:none}
