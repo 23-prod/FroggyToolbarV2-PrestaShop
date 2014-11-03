@@ -136,6 +136,14 @@
 			</select>
 		</label>
 	</fieldset>
+    <fieldset>
+        <legend>{l s='Id product/cat/cms' mod='froggytoolbarv2'}</legend>
+		<label>473</label>
+    </fieldset>
+	<fieldset>
+		<legend>{l s='Active modules' mod='froggytoolbarv2'}</legend>
+		<label>17</label>
+	</fieldset>
 	<fieldset>
 		<button class="froggytoolbar-debug-button" id="froggytoolbar-debug-valid">{l s='Valid' mod='froggytoolbarv2'}</button>
 	</fieldset>
