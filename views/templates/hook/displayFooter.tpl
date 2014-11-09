@@ -136,13 +136,27 @@
 			</select>
 		</label>
 	</fieldset>
+    {if isset($smarty.get.id_product)}
     <fieldset>
-        <legend>{l s='Id product/cat/cms' mod='froggytoolbarv2'}</legend>
-		<label>473</label>
+        <legend>{l s='Product ID' mod='froggytoolbarv2'}</legend>
+		<label>{$smarty.get.id_product|intval}</label>
     </fieldset>
+    {/if}
+    {if isset($smarty.get.id_category)}
+		<fieldset>
+			<legend>{l s='Category ID' mod='froggytoolbarv2'}</legend>
+			<label>{$smarty.get.id_category|intval}</label>
+		</fieldset>
+    {/if}
+    {if isset($smarty.get.id_cms)}
+		<fieldset>
+			<legend>{l s='CMS ID' mod='froggytoolbarv2'}</legend>
+			<label>{$smarty.get.id_cms|intval}</label>
+		</fieldset>
+    {/if}
 	<fieldset>
 		<legend>{l s='Active modules' mod='froggytoolbarv2'}</legend>
-		<label>17</label>
+		<label>{$froggytoolbarv2.modules_displayed|@count}</label>
 	</fieldset>
 	<fieldset>
 		<button class="froggytoolbar-debug-button" id="froggytoolbar-debug-valid">{l s='Valid' mod='froggytoolbarv2'}</button>
