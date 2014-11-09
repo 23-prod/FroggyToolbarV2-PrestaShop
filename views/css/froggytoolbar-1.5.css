@@ -26,6 +26,8 @@ html{margin-top:30px!important}
 #froggy-toolbar li{padding:0!important}
 #froggy-toolbar li a{color:#dadada!important}
 #froggy-toolbar li a:hover{color:#fff!important}
+#froggy-toolbar li span.fa{margin-right:10px}
+#froggy-toolbar li.display-box span.fa{margin-right:0}
 /*Froggy Tool Bar*/
 
 

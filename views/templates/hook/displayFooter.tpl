@@ -28,7 +28,7 @@
 				<li><a {$froggytoolbarv2.target_link}href="http://www.prestashop.com/forums/">{l s='PrestaShop Forum' mod='froggytoolbarv2'}</a></li>
 			</ul>
 		</li>
-		<li class="backoffice-link-toolbar first-floor toolbar-link"><a {$froggytoolbarv2.target_link}href="{$base_dir}{$froggytoolbarv2.admin_dir}{FroggyGetAdminLink a='AdminHome' e=$froggytoolbarv2.id_employee}"><span class="fc-toolbar-backoffice"></span><span>{l s='Back-Office' mod='froggytoolbarv2'}</span></a>
+		<li class="backoffice-link-toolbar first-floor toolbar-link"><a {$froggytoolbarv2.target_link}href="{$base_dir}{$froggytoolbarv2.admin_dir}{FroggyGetAdminLink a='AdminHome' e=$froggytoolbarv2.id_employee}"><span class="fa fa-tachometer"></span><span>{l s='Back-Office' mod='froggytoolbarv2'}</span></a>
 			<ul class="fc-toolbar-submenu">
 				<li><a {$froggytoolbarv2.target_link}href="{$base_dir}{$froggytoolbarv2.admin_dir}{FroggyGetAdminLink a='AdminOrders' e=$froggytoolbarv2.id_employee}">{l s='Orders' mod='froggytoolbarv2'}</a></li>
 				<li><a {$froggytoolbarv2.target_link}href="{$base_dir}{$froggytoolbarv2.admin_dir}{FroggyGetAdminLink a='AdminProducts' e=$froggytoolbarv2.id_employee}">{l s='Products' mod='froggytoolbarv2'}</a></li>
@@ -36,7 +36,7 @@
 				<li><a {$froggytoolbarv2.target_link}href="{$base_dir}{$froggytoolbarv2.admin_dir}{FroggyGetAdminLink a='AdminModules' e=$froggytoolbarv2.id_employee}">{l s='Modules' mod='froggytoolbarv2'}</a></li>
 			</ul>
 		</li>
-		<li class="news-toolbar first-floor toolbar-link"><a href="#"><span class="fc-toolbar-icon-plus"></span><span>{l s='New' mod='froggytoolbarv2'}</span></a>
+		<li class="news-toolbar first-floor toolbar-link"><a href="#"><span class="fa fa-plus-circle"></span><span>{l s='New' mod='froggytoolbarv2'}</span></a>
 			<ul class="fc-toolbar-submenu">
 				<li><a {$froggytoolbarv2.target_link}href="{$base_dir}{$froggytoolbarv2.admin_dir}{FroggyGetAdminLink a='AdminProducts' e=$froggytoolbarv2.id_employee}&addproduct">{l s='New product' mod='froggytoolbarv2'}</a></li>
 				<li><a {$froggytoolbarv2.target_link}href="{$base_dir}{$froggytoolbarv2.admin_dir}{FroggyGetAdminLink a='AdminCategories' e=$froggytoolbarv2.id_employee}&addcategory">{l s='New category' mod='froggytoolbarv2'}</a></li>
@@ -59,7 +59,7 @@
             </li>
         {/if}
         {if isset($froggytoolbarv2.modules_displayed) && $froggytoolbarv2.modules_displayed|@count gt 0}
-			<li class="modules-configuration first-floor toolbar-link"><a href="#"><span class="fc-toolbar-icon-plus"></span><span>{l s='Modules configuration' mod='froggytoolbarv2'}</span></a>
+			<li class="modules-configuration first-floor toolbar-link"><a href="#"><span class="fa fa-cog"></span><span>{l s='Modules configuration' mod='froggytoolbarv2'}</span></a>
 				<ul class="fc-toolbar-submenu">
                     {foreach from=$froggytoolbarv2.modules_displayed item=module}
 					    <li><a {$froggytoolbarv2.target_link}href="{$base_dir}{$module.configuration_link}">{if !empty($module.display_name)}{$module.display_name}{else}{$module.name}{/if}</a></li>
@@ -67,11 +67,13 @@
 				</ul>
 			</li>
         {/if}
-		<li class="first-floor toolbar-link"><a href="#" id="froggytoolbar-debug-option"><span class="fc-toolbar-icon-plus"></span><span id="froggytoolbar-debug-button-label">{l s='Enable debug option' mod='froggytoolbarv2'}</span></a></li>
+		<li class="first-floor toolbar-link"><a href="#" id="froggytoolbar-debug-option"><span class="fa fa-toggle-off"></span><span id="froggytoolbar-debug-button-label">{l s='Enable debug option' mod='froggytoolbarv2'}</span></a></li>
+		<li class="first-floor toolbar-link"><a href="#" id="fc-toolbar-traduction-link"><span class="fa fa-globe"></span class="fa fa-search"><span>{l s='Traduction'}</span></a></li>
 	</ul>
 	<ul class="fc-toolbar-box">
+		<li id="fc-toolbar-form-search"><form action=""><input type="search"/><button type="submit" value="Search"><span class="fa fa-search"></span></button></form></li>
 		<li class="display-box giant fc-toolbar-notification fc-toolbar-new-order" id="fc-toolbar-orders-notification-box">
-			<a {$froggytoolbarv2.target_link}href="{$base_dir}{$froggytoolbarv2.admin_dir}{FroggyGetAdminLink a='AdminOrders' e=$froggytoolbarv2.id_employee}"><span class="fc-toolbar-icon-order"><span class="fc-toolbar-notification-number" id="fc-toolbar-orders-notification-number"></span></span></a>
+			<a {$froggytoolbarv2.target_link}href="{$base_dir}{$froggytoolbarv2.admin_dir}{FroggyGetAdminLink a='AdminOrders' e=$froggytoolbarv2.id_employee}"><span class="fa fa-shopping-cart"><span class="fc-toolbar-notification-number" id="fc-toolbar-orders-notification-number"></span></span></a>
 			<div class="fc-box-content">
 				<div><span class="fc-toolbar-title-info">{l s='Last orders' mod='froggytoolbarv2'}</span></div>
 				<p id="fc-toolbar-orders-notification-label-new" class="fc-toolbar-noti-label">{l s='New orders have been passed on your shop:' mod='froggytoolbarv2'}</p>
@@ -81,7 +83,7 @@
 			</div>
 		</li>
 		<li class="display-box giant fc-toolbar-notification fc-toolbar-new-clients" id="fc-toolbar-customers-notification-box">
-			<a {$froggytoolbarv2.target_link}href="{$base_dir}{$froggytoolbarv2.admin_dir}{FroggyGetAdminLink a='AdminCustomers' e=$froggytoolbarv2.id_employee}"><span class="fc-toolbar-icon-clients"><span class="fc-toolbar-notification-number" id="fc-toolbar-customers-notification-number"></span></span></a>
+			<a {$froggytoolbarv2.target_link}href="{$base_dir}{$froggytoolbarv2.admin_dir}{FroggyGetAdminLink a='AdminCustomers' e=$froggytoolbarv2.id_employee}"><span class="fa fa-users"><span class="fc-toolbar-notification-number" id="fc-toolbar-customers-notification-number"></span></span></a>
 			<div class="fc-box-content">
 				<div><span class="fc-toolbar-title-info">{l s='Last customers' mod='froggytoolbarv2'}</span></div>
                 <p id="fc-toolbar-customers-notification-label-new" class="fc-toolbar-noti-label">{l s='New customers have subscribed to your shop:' mod='froggytoolbarv2'}</p>
@@ -91,7 +93,7 @@
 			</div>
 		</li>
 		<li class="display-box giant fc-toolbar-notification fc-toolbar-new-messages" id="fc-toolbar-messages-notification-box">
-			<a {$froggytoolbarv2.target_link}href="{$base_dir}{$froggytoolbarv2.admin_dir}{FroggyGetAdminLink a='AdminCustomerThreads' e=$froggytoolbarv2.id_employee}"><span class="fc-toolbar-icon-message"><span class="fc-toolbar-notification-number" id="fc-toolbar-messages-notification-number"></span></span></a>
+			<a {$froggytoolbarv2.target_link}href="{$base_dir}{$froggytoolbarv2.admin_dir}{FroggyGetAdminLink a='AdminCustomerThreads' e=$froggytoolbarv2.id_employee}"><span class="fa fa-comments"><span class="fc-toolbar-notification-number" id="fc-toolbar-messages-notification-number"></span></span></a>
 			<div class="fc-box-content">
 				<div><span class="fc-toolbar-title-info">{l s='Last messages' mod='froggytoolbarv2'}</span></div>
                 <p id="fc-toolbar-messages-notification-label-new" class="fc-toolbar-noti-label">{l s='New messages in your box:' mod='froggytoolbarv2'}</p>

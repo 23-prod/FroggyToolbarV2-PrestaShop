@@ -27,6 +27,8 @@ html{margin-top:30px!important}
 #froggy-toolbar li a{color:#b5b5b5;font-weight:normal;text-shadow:0 0 0 transparent}
 #froggy-toolbar li a:hover{color:#fff}
 #froggy-toolbar li a:visited{text-decoration:none!important}
+#froggy-toolbar li span.fa{margin-right:6px;font-size:1.2em}
+#froggy-toolbar li.display-box span.fa{margin-right:0}
 /*Froggy Tool Bar*/
 
 
@@ -65,32 +67,37 @@ html{margin-top:30px!important}
 
 /*List link*/
 
+/*Form search*/
 
+#fc-toolbar-form-search input[type=search]{background:#3d3d3d;border:1px solid #111;height:23px;padding:2px 4px;margin-top:5px;transition:all linear 0.2s}
+#fc-toolbar-form-search input[type=search]:focus{background:#f7f7f7}
+#fc-toolbar-form-search button{background: none!important;border: none!important;color:#dadada}
+
+/*Form search*/
 
 /*action Box*/
 
 #froggy-toolbar .fc-toolbar-box{height:36px;float:right}
 #froggy-toolbar .fc-toolbar-box li.display-box{height:36px;line-height:36px;margin:0;padding:0}
 #froggy-toolbar .fc-toolbar-box li.display-box.giant{position:relative}
-#froggy-toolbar .fc-toolbar-box li.display-box.giant .fc-box-content{width:270px;background:#fff;color:#333;box-shadow:0 6px 12px rgba(0, 0, 0, 0.176)}
+#froggy-toolbar .fc-toolbar-box li.display-box.giant .fc-box-content{width:315px;background:#fff;color:#333;box-shadow:0 6px 12px rgba(0, 0, 0, 0.176)}
 #froggy-toolbar .fc-toolbar-box li.display-box:hover{background:#090909}
 #froggy-toolbar .fc-toolbar-box li.display-box>a{height:100%;padding:0 12px;display:block}
 #froggy-toolbar .fc-toolbar-box .fc-box-content{display:none;position:absolute;right:0;border-radius:0 0 4px 4px}
 #froggy-toolbar .fc-toolbar-box .fc-box-content a{color:#333}
 #froggy-toolbar .fc-toolbar-box .display-box:hover .fc-box-content{display:block}
 #froggy-toolbar .fc-toolbar-box>li{padding:0;height:30px;line-height:30px;float:left}
-#froggy-toolbar .fc-toolbar-box li:hover{background:#4C545D}
 #froggy-toolbar .fc-toolbar-box li a{display:block;padding:0 12px}
 #froggy-toolbar .fc-toolbar-box li.display-box.fc-toolbar-notification>a{padding-right:21px!important}
 #froggy-toolbar .fc-toolbar-box li.display-box a .fc-toolbar-notification-number{display:none}
-#froggy-toolbar .fc-toolbar-box li.display-box.fc-toolbar-notification a .fc-toolbar-notification-number{display:block;color:#fff;font-size:10px;position:absolute;top:-7px;right:-17px;line-height:12px;border-radius:10px;background:#00AFF0;letter-spacing:0.0625em;padding:2px}
+#froggy-toolbar .fc-toolbar-box li.display-box.fc-toolbar-notification a .fc-toolbar-notification-number{display:block;color:#fff;font-size:10px;position:absolute;top:0;right:0;line-height:12px;border-radius:10px;background:#00AFF0;letter-spacing:0.0625em;padding:2px;font-family:arial, sans-serif}
 #froggy-toolbar .fc-toolbar-box li .fc-toolbar-title-info{display:block;font-size:13px;line-height:24px;color:#333;border-bottom:1px solid #DEDEDE;margin:0 12px}
 #froggy-toolbar .fc-toolbar-box li.display-box.giant ul{padding-bottom:5px}
 #froggy-toolbar .fc-toolbar-box li li.fc-toolbar-client-info{padding:0 12px}
 #froggy-toolbar .fc-toolbar-box li li.fc-toolbar-client-info a{color:#333!important}
 #froggy-toolbar .fc-toolbar-box li li.fc-toolbar-client-info:hover{background:#00AFF0;color:#fff}
 #froggy-toolbar .fc-toolbar-box li li.fc-toolbar-client-info:hover a{color:#fff!important}
-#froggy-toolbar .fc-toolbar-box .footer-toolbar-box{width:246px;display:block;margin:0 12px;border-top:1px solid #DEDEDE;float:left}
+#froggy-toolbar .fc-toolbar-box .footer-toolbar-box{display:block;margin:0 12px;border-top:1px solid #DEDEDE}
 #froggy-toolbar p.footer-toolbar-box .fc-toolbar-seeall-link{color:#333!important;padding:0;float:right}
 #froggy-toolbar p.footer-toolbar-box .fc-toolbar-seeall-link:hover{color:#00AFF0!important}
 #froggy-toolbar .fc-toolbar-box li .fc-toolbar-client-info{line-height:24px}
