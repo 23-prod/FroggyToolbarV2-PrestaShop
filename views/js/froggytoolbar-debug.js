@@ -89,6 +89,8 @@ function switchDebugBoxDisplay(action)
 		$('#froggytoolbar-debug-button-label').text(froggytoolbar_debug_enable_label);
 		$('.froggytoolbar-debug-module-name').fadeOut();
 		$('.froggytoolbar-debug-module-block').css('border', '0px');
+		$('#froggytoolbar-debug-option .fa').removeClass('fa-toggle-on');
+		$('#froggytoolbar-debug-option .fa').addClass('fa-toggle-off');
 	}
 	else
 	{
@@ -96,6 +98,8 @@ function switchDebugBoxDisplay(action)
 		$('#froggytoolbar-debug-button-label').text(froggytoolbar_debug_disable_label);
 		$('.froggytoolbar-debug-module-name').fadeIn();
 		$('.froggytoolbar-debug-module-block').css('border', '1px ' + $('#froggytoolbar-debug-border-style').val() + ' #' + $('#froggytoolbar-debug-border-color').val());
+		$('#froggytoolbar-debug-option .fa').removeClass('fa-toggle-off');
+		$('#froggytoolbar-debug-option .fa').addClass('fa-toggle-on');
 	}
 	froggy_cookie.write('enable', action);
 }

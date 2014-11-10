@@ -37,6 +37,12 @@ class FroggyToolbarV2HookDisplayFooterProcessor extends FroggyHookProcessor
 		if (Configuration::get('FC_TLB_TARGET_LINK') == '_blank')
 			$target_link = 'target="_blank" ';
 
+		// Load admin link
+		$token_search = Tools::getAdminToken('AdminSearch'.(int)Tab::getIdFromClassName('AdminSearch').(int)$cookie_fc->id_employee);
+		$token_translation = Tools::getAdminToken('AdminTranslations'.(int)Tab::getIdFromClassName('AdminTranslations').(int)$cookie_fc->id_employee);
+		$search_link = Configuration::get('FC_TLB_ADMIN_DIR').'index.php?controller=AdminSearch&token='.$token_search;
+		$translation_link = Configuration::get('FC_TLB_ADMIN_DIR').'index.php?controller=AdminTranslations&token='.$token_translation.'&type=front&lang='.Language::getIsoById((int)Context::getContext()->language->id).'&theme='.basename(_PS_THEME_DIR_);
+
 		// Assign
 		$assign = array(
 			'module_dir' => $this->path,
@@ -48,6 +54,8 @@ class FroggyToolbarV2HookDisplayFooterProcessor extends FroggyHookProcessor
 			'timer' => Configuration::get('FC_TLB_TIMER'),
 			'ps_version' => substr(_PS_VERSION_, 0, 3),
 			'modules_displayed' => Module::$modules_displayed,
+			'translation_link' => _PS_BASE_URL_.__PS_BASE_URI__.$translation_link,
+			'search_link' => _PS_BASE_URL_.__PS_BASE_URI__.$search_link,
 		);
 
 		$this->smarty->assign($this->module->name, $assign);

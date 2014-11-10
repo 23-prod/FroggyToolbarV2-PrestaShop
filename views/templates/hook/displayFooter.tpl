@@ -68,10 +68,10 @@
 			</li>
         {/if}
 		<li class="first-floor toolbar-link"><a href="#" id="froggytoolbar-debug-option"><span class="fa fa-toggle-off"></span><span id="froggytoolbar-debug-button-label">{l s='Enable debug option' mod='froggytoolbarv2'}</span></a></li>
-		<li class="first-floor toolbar-link"><a href="#" id="fc-toolbar-traduction-link"><span class="fa fa-globe"></span class="fa fa-search"><span>{l s='Traduction'}</span></a></li>
+		<li class="first-floor toolbar-link"><a {$froggytoolbarv2.target_link}href="{$froggytoolbarv2.translation_link}" id="fc-toolbar-traduction-link"><span class="fa fa-globe"></span class="fa fa-search"><span>{l s='Translation'}</span></a></li>
 	</ul>
 	<ul class="fc-toolbar-box">
-		<li id="fc-toolbar-form-search"><form action=""><input type="search"/><button type="submit" value="Search"><span class="fa fa-search"></span></button></form></li>
+		<li id="fc-toolbar-form-search"><form action="{$froggytoolbarv2.search_link}" method="post"><input type="search" name="bo_query" /><button type="submit" value="Search"><span class="fa fa-search"></span></button></form></li>
 		<li class="display-box giant fc-toolbar-notification fc-toolbar-new-order" id="fc-toolbar-orders-notification-box">
 			<a {$froggytoolbarv2.target_link}href="{$base_dir}{$froggytoolbarv2.admin_dir}{FroggyGetAdminLink a='AdminOrders' e=$froggytoolbarv2.id_employee}"><span class="fa fa-shopping-cart"><span class="fc-toolbar-notification-number" id="fc-toolbar-orders-notification-number"></span></span></a>
 			<div class="fc-box-content">
