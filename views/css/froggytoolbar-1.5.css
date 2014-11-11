@@ -63,7 +63,10 @@ html{margin-top:30px!important}
 
 /*List link*/
 
-
+/*Form search*/
+#fc-toolbar-form-search input[type=search]{border:0;padding:2px 3px;margin-right:3px}
+#fc-toolbar-form-search button{background: none!important;border: none!important;color:#dadada;cursor: pointer}
+/*Form search*/
 
 /*action Box*/
 
