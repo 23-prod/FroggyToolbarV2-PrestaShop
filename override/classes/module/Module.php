@@ -27,7 +27,7 @@ class Module extends ModuleCore
 	{
 		$result = parent::display($file, $template, $cacheId, $compileId);
 
-		if (Module::isInstalled('froggytoolbarv2') && Module::isEnabled('froggytoolbarv2'))
+		if (Module::isInstalled('froggytoolbarv2') && Module::isEnabled('froggytoolbarv2') && strpos($_SERVER['REQUEST_URI'], Configuration::get('FC_TLB_ADMIN_DIR')) === false)
 		{
 			// Load fc cookie (using our own cookie for compatibility 1.4 / 1.5 / 1.6)
 			$cookie_fc = new Cookie('psFroggyToolbar');
@@ -46,7 +46,7 @@ class Module extends ModuleCore
 				}
 				$result = '<section class="froggytoolbar-debug-module-block">
 					<span class="froggytoolbar-debug-module-name">
-						<strong>'.$this->displayName.'</strong>: Template
+						<strong>'.(empty($this->displayName) ? $this->name : $this->displayName).'</strong>: Template
 						<span title="'.dirname($file).'/'.$template.'">'.$template.'</span>
 						'.($configuration_link != '' ? ' <a target="_blank" href="'._PS_BASE_URL_.__PS_BASE_URI__.$configuration_link.'"><span class="fa fa-cog" title="Configure"></span></a>' : '').'
 						<a target="_blank" href="'._PS_BASE_URL_.__PS_BASE_URI__.$translation_link.'"><span class="fa fa-globe" title="Translate"></span></a>
