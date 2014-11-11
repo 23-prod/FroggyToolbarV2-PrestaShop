@@ -41,7 +41,7 @@ class FroggyToolbarV2HookDisplayFooterProcessor extends FroggyHookProcessor
 		$token_search = Tools::getAdminToken('AdminSearch'.(int)Tab::getIdFromClassName('AdminSearch').(int)$cookie_fc->id_employee);
 		$token_translation = Tools::getAdminToken('AdminTranslations'.(int)Tab::getIdFromClassName('AdminTranslations').(int)$cookie_fc->id_employee);
 		$search_link = Configuration::get('FC_TLB_ADMIN_DIR').'index.php?tab=AdminSearch&controller=AdminSearch&token='.$token_search;
-		$translation_link = Configuration::get('FC_TLB_ADMIN_DIR').'index.php?tab=AdminTranslations&controller=AdminTranslations&token='.$token_translation.'&type=front&lang='.Language::getIsoById((int)FroggyContext::getContext()->language->id).'&theme='.basename(_PS_THEME_DIR_);
+		$translation_link = Configuration::get('FC_TLB_ADMIN_DIR').'index.php?tab=AdminTranslations&controller=AdminTranslations&token='.$token_translation.'&type=front&lang='.Language::getIsoById((int)$this->context->language->id).'&theme='.basename(_PS_THEME_DIR_);
 
 		// Assign
 		$assign = array(
