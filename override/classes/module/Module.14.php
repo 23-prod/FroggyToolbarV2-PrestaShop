@@ -40,11 +40,11 @@ class Module extends ModuleCore
 
 				$configuration_link = '';
 				$token = Tools::getAdminToken('AdminTranslations'.(int)Tab::getIdFromClassName('AdminTranslations').(int)$cookie_fc->id_employee);
-				$translation_link = Configuration::get('FC_TLB_ADMIN_DIR').'index.php?controller=AdminTranslations&token='.$token.'&type=modules&lang='.Language::getIsoById((int)FroggyContext::getContext()->language->id).'#'.$module->name;
+				$translation_link = Configuration::get('FC_TLB_ADMIN_DIR').'index.php?tab=AdminTranslations&controller=AdminTranslations&token='.$token.'&type=modules&lang='.Language::getIsoById((int)FroggyContext::getContext()->language->id).'#'.$module->name;
 				if (method_exists($module, 'getContent'))
 				{
 					$token = Tools::getAdminToken('AdminModules'.(int)Tab::getIdFromClassName('AdminModules').(int)$cookie_fc->id_employee);
-					$configuration_link = Configuration::get('FC_TLB_ADMIN_DIR').'index.php?controller=AdminModules&token='.$token.'&configure='.$module->name.'&module_name='.$module->name;
+					$configuration_link = Configuration::get('FC_TLB_ADMIN_DIR').'index.php?tab=AdminModules&controller=AdminModules&token='.$token.'&configure='.$module->name.'&module_name='.$module->name;
 					Module::$modules_displayed[$module->name] = array('name' => $module->name, 'display_name' => $module->displayName, 'configuration_link' => $configuration_link, 'translation_link' => $translation_link);
 				}
 				$result = '<section class="froggytoolbar-debug-module-block">
