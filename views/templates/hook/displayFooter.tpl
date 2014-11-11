@@ -171,7 +171,7 @@
     var froggytoolbar_ps_version = '{$froggytoolbarv2.ps_version}';
     var froggytoolbar_notification_timer = {$froggytoolbarv2.timer};
     {if $froggytoolbarv2.ps_version eq '1.4'}
-        var froggytoolbar_notification_url = '{$base_dir}/modules/froggytoolbar/ajax.php';
+        var froggytoolbar_notification_url = '{$base_dir}/modules/froggytoolbarv2/ajax.php';
     {else}
         var froggytoolbar_notification_url = '{$base_dir}{$froggytoolbarv2.admin_dir}ajax.php';
     {/if}

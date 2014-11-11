@@ -22,7 +22,7 @@
 defined('_PS_VERSION_') || require dirname(__FILE__).'/index.php';
 
 // Include Froggy Library
-if (!class_exists('FroggyModule', false)) require_once _PS_MODULE_DIR_.'/froggytoolbar/froggy/FroggyModule.php';
+if (!class_exists('FroggyModule', false)) require_once _PS_MODULE_DIR_.'/froggytoolbarv2/froggy/FroggyModule.php';
 
 
 class FroggyToolbarV2 extends FroggyModule
