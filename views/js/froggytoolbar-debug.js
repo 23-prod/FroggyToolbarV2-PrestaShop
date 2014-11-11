@@ -58,6 +58,15 @@ $(document).ready(function() {
 
 function loadDebugBoxConfiguration()
 {
+	if (froggy_cookie.read('top') == null)
+	{
+		froggy_cookie.write('left', '300px');
+		froggy_cookie.write('top', '300px');
+		froggy_cookie.write('color', 'FF0000');
+		froggy_cookie.write('style', 'dotted');
+		froggy_cookie.write('enable', 0);
+	}
+
 	if (froggy_cookie.read('top') != '')
 		$('#froggytoolbar-debug-container').css('top', froggy_cookie.read('top') + 'px');
 	if (froggy_cookie.read('left') != '')
@@ -98,6 +107,9 @@ function switchDebugBoxDisplay(action)
 		$('#froggytoolbar-debug-button-label').text(froggytoolbar_debug_disable_label);
 		$('.froggytoolbar-debug-module-name').fadeIn();
 		$('.froggytoolbar-debug-module-block').css('border', '1px ' + $('#froggytoolbar-debug-border-style').val() + ' #' + $('#froggytoolbar-debug-border-color').val());
+		$('.froggytoolbar-debug-module-name').css('color', '#'+froggy_cookie.read('color'));
+		$('.froggytoolbar-debug-module-name span').css('color', '#'+froggy_cookie.read('color'));
+		$('.froggytoolbar-debug-module-name').css('border', '1px solid #' + froggy_cookie.read('color'));
 		$('#froggytoolbar-debug-option .fa').removeClass('fa-toggle-off');
 		$('#froggytoolbar-debug-option .fa').addClass('fa-toggle-on');
 	}
