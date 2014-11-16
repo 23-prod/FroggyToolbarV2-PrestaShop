@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS `@PREFIX@ftv2_custom_menu`;

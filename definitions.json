@@ -5,6 +5,11 @@
 
 	"hooks": { "all" : [ "Footer", "BackOfficeHeader", "Header" ] },
 
+    "sql" : {
+        "install" : [ "install.sql" ],
+        "uninstall" : [ "uninstall.sql" ]
+    },
+
 	"configurations" : {
         "FC_TLB_ADMIN_DIR" : "",
 		"FC_TLB_TARGET_LINK" : ""
