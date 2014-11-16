@@ -54,7 +54,7 @@
                 {else}
                     <a href="#">
                 {/if}
-                    <span class="fc-toolbar-edit-page"></span><span>{l s='Edit' mod='froggytoolbarv2'}</span>
+                    <span class="fa fa-pencil"></span><span>{l s='Edit' mod='froggytoolbarv2'}</span>
                 </a>
             </li>
         {/if}
