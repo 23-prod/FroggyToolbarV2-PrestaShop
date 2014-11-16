@@ -18,7 +18,7 @@
 *}
 
 
-<table class="table" id="{$froggyhelper.module_name}-{$froggy_helper.key}-list">
+<table class="table" id="{$froggyhelper.module_name}-{$froggyhelper.configuration.key}-list">
     <thead>
     <tr>
         {foreach from=$froggyhelper.configuration.list.labels key=field item=label}
@@ -36,7 +36,7 @@
             <td>
 				<div class="btn-group-action">
                     <div class="btn-group pull-right">
-						<a class="delete" title="Delete" onclick="if (confirm('Delete selected item?')) { return true; } else { event.stopPropagation(); event.preventDefault(); };" href="{$form_url}&delete301Redirection={$row_data.id}">
+						<a class="delete" title="Delete" onclick="if (confirm('Delete selected item?')) { return true; } else { event.stopPropagation(); event.preventDefault(); };" href="{$froggyhelper.form_url}&delete301Redirection={$row_data.id}">
 							<i class="icon-trash"></i> {l s='Delete' mod=$froggyhelper.module_name}
 						</a>
 				    </div>

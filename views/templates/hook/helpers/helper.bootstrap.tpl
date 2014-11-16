@@ -19,11 +19,11 @@
 
 <form enctype="multipart/form-data" method="POST" action="{$froggyhelper.form_url}">
 
-	<input type="hidden" value="1" name="{$froggyhelper.module_name}-{$froggyhelper.key}-submit">
+	<input type="hidden" value="1" name="{$froggyhelper.module_name}-{$froggyhelper.configuration.key}-submit">
 
-	<div id="fieldset-{$froggyhelper.module_name}-{$froggyhelper.key}" class="panel">
+	<div id="fieldset-{$froggyhelper.module_name}-{$froggyhelper.configuration.key}" class="panel">
 		<div class="panel-heading">
-			<img alt="{$froggyhelper.label}" src="../modules/{$froggyhelper.module_name}/logo.gif"> {$froggyhelper.label}
+			<img alt="{$froggyhelper.configuration.label}" src="../modules/{$froggyhelper.module_name}/logo.gif"> {$froggyhelper.configuration.label}
 		</div><br>
 
         {if isset($froggyhelper.configuration.list)}

@@ -43,7 +43,7 @@
         {/foreach}
 
 		<div class="panel-footer">
-			<button class="btn btn-default pull-right" name="{$module_name}-submit" id="{$module_name}-form-submit-btn" value="1" type="submit">
+			<button class="btn btn-default pull-right" name="{$froggyhelper.module_name}-submit" id="{$froggyhelper.module_name}-form-submit-btn" value="1" type="submit">
 				<i class="process-icon-save"></i> {l s='Save' mod=$froggyhelper.module_name}
 			</button>
 		</div>
