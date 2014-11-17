@@ -20,6 +20,8 @@
 
 <h2 align="center">{l s='Froggy Advanced Toolbar' mod='froggytoolbar'}</h2>
 
+{$froggytoolbarv2.helper_display}
+
 <fieldset id="froggytoolbar_fieldset">
 	<legend><img src="{$froggytoolbarv2.module_dir}logo.png" alt="" width="16" />{l s='Froggy Advanced Toolbar' mod='froggytoolbar'}</legend>
     <div class="panel">
@@ -29,6 +31,8 @@
 
     	<h3>{l s='Options' mod='froggytoolbar'}</h3>
     	<div id="froggytoolbar_options">
+
+
             <form method="POST" action="" class="form-horizontal">
                 <div class="form-group">
                     <label class="control-label col-lg-3">{l s='Open link:' mod='froggytoolbar'}</label>
