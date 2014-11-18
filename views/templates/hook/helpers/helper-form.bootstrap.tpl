@@ -34,8 +34,16 @@
                             </span>
                         {elseif $field.type eq 'text'}
 							<input type="text" value="{if isset($field.value)}{$field.value|htmlentities}{/if}" name="{$field.name}" id="{$field.name}">
+                        {elseif $field.type eq 'select'}
+							<select name="{$field.name}" id="{$field.name}">
+                                {foreach from=$field.values key=option_label item=option_value}
+                                    <option value="{$option_value}" {if isset($field.value) && $field.value eq $option_value}selected{/if}>{$option_label}</option>
+                                {/foreach}
+                            </select>
+                        {elseif $field.type eq 'custom' && isset($field.html)}
+                            {$field.html}
                         {/if}
-                        <p class="help-block">{$field.desc}</p>
+                        {if isset($field.desc)}<p class="help-block">{$field.desc}</p>{/if}
                     </div>
                     <br clear="left">
                 </div>
