@@ -53,16 +53,22 @@ class FroggyToolbarV2HookGetContentProcessor extends FroggyHookProcessor
 
 	public function initHelper()
 	{
+		$select_values = array(
+			$this->module->l('In the same page') => '',
+			$this->module->l('In a new page') => '_blank',
+		);
+
 		$configuration = array();
 
 		$configuration['configuration'] = array(
 			'key' => 'configuration',
 			'label' => $this->module->l('Configuration'),
 			'form' => array(
-				'301Redirection' => array(
+				'Options' => array(
 					'label' => $this->module->l('Options'),
 					'fields' => array(
-						array('type' => 'text', 'label' => $this->module->l('Notifications refresh each (in seconds):'), 'name' => 'FC_TLB_TIMER', 'value', 'desc' => $this->module->l('Refresh timer must be upper than 15s')),
+						array('type' => 'select', 'label' => $this->module->l('Open link:'), 'name' => 'FC_TLB_TARGET_LINK', 'default_value' => Configuration::get('FC_TLB_TARGET_LINK'), 'values' => $select_values),
+						array('type' => 'text', 'label' => $this->module->l('Notifications refresh each (in seconds):'), 'name' => 'FC_TLB_TIMER', 'default_value' =>  Configuration::get('FC_TLB_TIMER'), 'desc' => $this->module->l('Refresh timer must be upper than 15s')),
 					)
 				),
 			)
