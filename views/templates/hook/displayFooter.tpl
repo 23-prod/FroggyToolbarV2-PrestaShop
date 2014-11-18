@@ -69,6 +69,17 @@
         {/if}
 		<li class="first-floor toolbar-link"><a href="#" id="froggytoolbar-debug-option"><span class="fa fa-toggle-off"></span><span id="froggytoolbar-debug-button-label">{l s='Enable debug option' mod='froggytoolbarv2'}</span></a></li>
 		<li class="first-floor toolbar-link"><a {$froggytoolbarv2.target_link}href="{$froggytoolbarv2.translation_link}" id="fc-toolbar-traduction-link"><span class="fa fa-globe"></span><span>{l s='Translation'}</span></a></li>
+		<li class="backoffice-link-toolbar first-floor toolbar-link"><a href="#"><span class="fa fa-link"></span><span>{l s='Shortcuts' mod='froggytoolbarv2'}</span></a>
+			<ul class="fc-toolbar-submenu">
+            {if $froggytoolbarv2.custom_menu|@count gt 0}
+                {foreach from=$froggytoolbarv2.custom_menu item=menu}
+                    <li><a {$froggytoolbarv2.target_link}href="{$menu.link}">{$menu.label}</a></li>
+                {/foreach}
+            {else}
+				<li><a {$froggytoolbarv2.target_link}href="{$froggytoolbarv2.configuration_link}">{l s='Create your own shorcuts' mod='froggytoolbarv2'}</a></li>
+            {/if}
+			</ul>
+		</li>
 	</ul>
 	<ul class="fc-toolbar-box">
 		<li id="fc-toolbar-form-search"><form action="{$froggytoolbarv2.search_link}" method="post"><input type="search" name="bo_query" /><button type="submit" value="Search"><span class="fa fa-search"></span></button></form></li>
@@ -169,7 +180,7 @@
 
 <script>
     var froggytoolbar_ps_version = '{$froggytoolbarv2.ps_version}';
-    var froggytoolbar_notification_timer = {$froggytoolbarv2.timer};
+    var froggytoolbar_notification_timer = ({$froggytoolbarv2.timer} * 1000);
     {if $froggytoolbarv2.ps_version eq '1.4'}
         var froggytoolbar_notification_url = '{$base_dir}/modules/froggytoolbarv2/ajax.php';
     {else}
