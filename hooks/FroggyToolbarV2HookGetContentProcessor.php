@@ -87,6 +87,35 @@ class FroggyToolbarV2HookGetContentProcessor extends FroggyHookProcessor
 		return $result;
 	}
 
+	public function processOptions()
+	{
+		Configuration::updateValue('FC_TLB_TARGET_LINK', Tools::getValue('FC_TLB_TARGET_LINK'));
+		Configuration::updateValue('FC_TLB_TIMER', 15);
+		$timer = (int)((int)Tools::getValue('FC_TLB_TIMER'));
+		if ($timer > 15000)
+			$timer = $timer / 1000;
+		if ($timer > 15)
+			Configuration::updateValue('FC_TLB_TIMER', (int)$timer);
+		return true;
+	}
+
+	public function processShortcuts()
+	{
+		$menu = new FroggyToolbarCustomMenu();
+		$menu->label = Tools::getValue('label');
+		$menu->link = Tools::getValue('link');
+		$menu->id_employee = $this->context->employee->id;
+		$menu->date_add = date('Y-m-d H:i:s');
+		try {
+			$menu->add();
+			return true;
+		} catch (Exception $e) {
+			die($e->getMessage());
+			return false;
+		}
+		return false;
+	}
+
 	/**
 	 * Configuration method
 	 * @return string $html
@@ -95,15 +124,14 @@ class FroggyToolbarV2HookGetContentProcessor extends FroggyHookProcessor
 	{
 		$form_result = false;
 		if (Tools::isSubmit('froggytoolbarv2-configuration-submit'))
+			$form_result = $this->processOptions();
+		if (Tools::isSubmit('froggytoolbarv2-shortcut-submit'))
+			$form_result = $this->processShortcuts();
+		if (Tools::isSubmit('delete-shortcut'))
 		{
-			Configuration::updateValue('FC_TLB_TARGET_LINK', Tools::getValue('FC_TLB_TARGET_LINK'));
-			Configuration::updateValue('FC_TLB_TIMER', 15);
-			$timer = (int)((int)Tools::getValue('FC_TLB_TIMER'));
-			if ($timer > 15000)
-				$timer = $timer / 1000;
-			if ($timer > 15)
-				Configuration::updateValue('FC_TLB_TIMER', (int)$timer);
-			$form_result = true;
+			$menu = new FroggyToolbarCustomMenu((int)Tools::getValue('delete-shortcut'));
+			if ($menu->id > 0)
+				$menu->delete();
 		}
 
 		$assign = array(
