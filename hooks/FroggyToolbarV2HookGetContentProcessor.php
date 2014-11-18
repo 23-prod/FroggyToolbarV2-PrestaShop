@@ -22,35 +22,9 @@
 class FroggyToolbarV2HookGetContentProcessor extends FroggyHookProcessor
 {
 	/**
-	 * Configuration method
-	 * @return string $html
+	 * Init Helper
+	 * @return string HTML
 	 */
-	public function run()
-	{
-		$result = '';
-		if (Tools::getValue('FC_TLB_TIMER') != '')
-		{
-			Configuration::updateValue('FC_TLB_TARGET_LINK', Tools::getValue('FC_TLB_TARGET_LINK'));
-			Configuration::updateValue('FC_TLB_TIMER', 15000);
-			$timer = (int)((int)Tools::getValue('FC_TLB_TIMER') * 1000);
-			if ($timer > 15000)
-				Configuration::updateValue('FC_TLB_TIMER', (int)$timer);
-
-			$result = 'OK';
-		}
-
-		$assign = array(
-			'module_dir' => $this->path,
-			'target_link' => Configuration::get('FC_TLB_TARGET_LINK'),
-			'timer' => Configuration::get('FC_TLB_TIMER'),
-			'helper_display' => $this->initHelper(),
-			'result' => $result,
-		);
-
-		$this->smarty->assign($this->module->name, $assign);
-		return $this->module->fcdisplay(__FILE__, 'getContent.tpl');
-	}
-
 	public function initHelper()
 	{
 		$select_values = array(
@@ -111,5 +85,34 @@ class FroggyToolbarV2HookGetContentProcessor extends FroggyHookProcessor
 		$result .= $helper->render();
 
 		return $result;
+	}
+
+	/**
+	 * Configuration method
+	 * @return string $html
+	 */
+	public function run()
+	{
+		$form_result = false;
+		if (Tools::isSubmit('froggytoolbarv2-configuration-submit'))
+		{
+			Configuration::updateValue('FC_TLB_TARGET_LINK', Tools::getValue('FC_TLB_TARGET_LINK'));
+			Configuration::updateValue('FC_TLB_TIMER', 15);
+			$timer = (int)((int)Tools::getValue('FC_TLB_TIMER'));
+			if ($timer > 15000)
+				$timer = $timer / 1000;
+			if ($timer > 15)
+				Configuration::updateValue('FC_TLB_TIMER', (int)$timer);
+			$form_result = true;
+		}
+
+		$assign = array(
+			'module_dir' => $this->path,
+			'helper_display' => $this->initHelper(),
+			'form_result' => $form_result,
+		);
+
+		$this->smarty->assign($this->module->name, $assign);
+		return $this->module->fcdisplay(__FILE__, 'getContent.tpl');
 	}
 }

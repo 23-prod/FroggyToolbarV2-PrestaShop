@@ -58,7 +58,7 @@ class FroggyToolbarV2 extends FroggyModule
 
 		// Save it in configuration table
 		Configuration::updateValue('FC_TLB_ADMIN_DIR', $admin_dir);
-		Configuration::updateValue('FC_TLB_TIMER', 30000);
+		Configuration::updateValue('FC_TLB_TIMER', 30);
 
 		return $return;
 	}
