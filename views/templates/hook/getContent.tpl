@@ -18,27 +18,10 @@
  * @license   Unauthorized copying of this file, via any medium is strictly prohibited
  *}
 
-<fieldset id="froggytoolbar_fieldset">
-	<legend><img src="{$froggytoolbarv2.module_dir}logo.png" alt="" width="16" />{l s='Froggy Advanced Toolbar' mod='froggytoolbar'}</legend>
 
-    {if $froggytoolbarv2.result eq 'OK'}
+    {if $froggytoolbarv2.form_result == true}
         <div class="conf confirm">{l s='The new configuration has been saved!' mod='froggytoolbar'}</div>
     {/if}
 
-	<h3>{l s='Options' mod='froggytoolbar'}</h3>
-	<div id="froggytoolbar_options">
-        <form method="POST" action="">
-            <label>{l s='Open link:' mod='froggytoolbar'}</label>
-            <div class="margin-form">
-                <select name="FC_TLB_TARGET_LINK">
-                    <option value="" {if $froggytoolbarv2.target_link eq ''}selected="selected"{/if}>{l s='In the same page' mod='froggytoolbar'}</option>
-                    <option value="_blank" {if $froggytoolbarv2.target_link eq '_blank'}selected="selected"{/if}>{l s='In a new page' mod='froggytoolbar'}</option>
-                </select>
-            </div>
-            <label>{l s='Notifications refresh each:' mod='froggytoolbar'}</label>
-            <div class="margin-form"><input type="text" name="FC_TLB_TIMER" value="{$froggytoolbarv2.timer / 1000}" /> s</div>
-            <p>{l s='Refresh timer must be upper than 15s' mod='froggytoolbar'}</p>
-            <label><input type="submit" value="{l s='Save' mod='froggytoolbar'}" name="froggytoolbar_ft_form" class="button" /></label>
-        </form>
-	</div>
-</fieldset>
+    {$froggytoolbarv2.helper_display}
+

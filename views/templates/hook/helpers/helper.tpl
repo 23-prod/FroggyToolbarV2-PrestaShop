@@ -21,10 +21,8 @@
 
 	<input type="hidden" value="1" name="{$froggyhelper.module_name}-{$froggyhelper.configuration.key}-submit">
 
-	<div id="fieldset-{$froggyhelper.module_name}-{$froggyhelper.configuration.key}" class="panel">
-		<div class="panel-heading">
-			<img alt="{$froggyhelper.configuration.label}" src="../modules/{$froggyhelper.module_name}/logo.gif"> {$froggyhelper.configuration.label}
-		</div><br>
+	<fieldset id="fieldset-{$froggyhelper.module_name}-{$froggyhelper.configuration.key}">
+		<legend><img alt="{$froggyhelper.configuration.label}" src="../modules/{$froggyhelper.module_name}/logo.gif"> {$froggyhelper.configuration.label}</legend>
 
         {if isset($froggyhelper.configuration.list)}
             {include file='./helper-list.tpl'}
@@ -34,6 +32,6 @@
             {include file='./helper-form.tpl'}
         {/if}
 
-	</div>
-
+	</fieldset>
+    <br>
 </form>
