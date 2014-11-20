@@ -107,6 +107,12 @@ class FroggyToolbarV2HookGetContentProcessor extends FroggyHookProcessor
 		$menu->id_employee = $this->context->employee->id;
 		$menu->date_add = date('Y-m-d H:i:s');
 		try {
+			if (Tools::substr(_PS_VERSION_, 0, 3) == '1.4')
+			{
+				$return = $menu->validateFields(false, true);
+				if ($return !== true)
+					throw new Exception($return);
+			}
 			$menu->add();
 			return true;
 		} catch (Exception $e) {
