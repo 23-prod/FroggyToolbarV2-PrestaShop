@@ -55,12 +55,12 @@ class FroggyToolbarCustomMenu extends ObjectModel
 
 	/*** Retrocompatibility 1.4 ***/
 
-	protected 	$fieldsRequired = array('label', 'link');
-	protected 	$fieldsSize = array('label' => 255, 'link' => 255);
-	protected 	$fieldsValidate = array('label' => 'isUrl', 'link' => 'isUrl');
+	protected $fieldsRequired = array('label', 'link');
+	protected $fieldsSize = array('label' => 255, 'link' => 255);
+	protected $fieldsValidate = array('label' => 'isUrl', 'link' => 'isUrl');
 
-	protected 	$table = 'ftv2_custom_menu';
-	protected 	$identifier = 'id_ftv2_custom_menu';
+	protected $table = 'ftv2_custom_menu';
+	protected $identifier = 'id_ftv2_custom_menu';
 
 	public function getFields()
 	{
@@ -69,6 +69,7 @@ class FroggyToolbarCustomMenu extends ObjectModel
 
 		parent::validateFields();
 
+		$fields = array();
 		$fields['label'] = pSQL($this->label);
 		$fields['link'] = pSQL($this->link);
 		$fields['position'] = (int)self::getNewPosition((int)$this->id_employee);

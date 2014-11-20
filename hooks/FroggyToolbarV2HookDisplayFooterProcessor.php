@@ -48,14 +48,14 @@ class FroggyToolbarV2HookDisplayFooterProcessor extends FroggyHookProcessor
 		// Assign
 		$assign = array(
 			'module_dir' => $this->path,
-			'module_img_dir' => $this->path.'views/img/',
+			'module_img_dir' => $this->path.'img/',
 			'target_link' => $target_link,
 			'id_employee' => $employee->id,
 			'firstname_employee' => $employee->firstname,
 			'admin_dir' => Configuration::get('FC_TLB_ADMIN_DIR'),
 			'timer' => Configuration::get('FC_TLB_TIMER'),
-			'ps_version' => substr(_PS_VERSION_, 0, 3),
-			'modules_displayed' => Module::$modules_displayed,
+			'ps_version' => Tools::substr(_PS_VERSION_, 0, 3),
+			'modules_displayed' => (isset(Module::$modules_displayed) ? Module::$modules_displayed : array()),
 			'translation_link' => _PS_BASE_URL_.__PS_BASE_URI__.$translation_link,
 			'search_link' => _PS_BASE_URL_.__PS_BASE_URI__.$search_link,
 			'configuration_link' => _PS_BASE_URL_.__PS_BASE_URI__.$configuration_link.'&configure=froggytoolbarv2&module_name=froggytoolbarv2',

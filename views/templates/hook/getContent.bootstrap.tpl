@@ -18,10 +18,10 @@
  * @license   Unauthorized copying of this file, via any medium is strictly prohibited
  *}
 
-<h2 align="center">{l s='Froggy Advanced Toolbar' mod='froggytoolbar'}</h2>
+<h2 align="center">{l s='Froggy Advanced Toolbar' mod='froggytoolbarv2'}</h2>
 
 {if $froggytoolbarv2.form_result == true}
-    <div class="module_confirmation conf confirm alert alert-success">{l s='The new configuration has been saved!' mod='froggytoolbar'}</div>
+    <div class="module_confirmation conf confirm alert alert-success">{l s='The new configuration has been saved!' mod='froggytoolbarv2'}</div>
 {/if}
 
-{$froggytoolbarv2.helper_display}
+{FroggyDisplaySafeHtml s=$froggytoolbarv2.helper_display}

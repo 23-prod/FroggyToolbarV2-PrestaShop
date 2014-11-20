@@ -20,8 +20,8 @@
 
 
     {if $froggytoolbarv2.form_result == true}
-        <div class="conf confirm">{l s='The new configuration has been saved!' mod='froggytoolbar'}</div>
+        <div class="conf confirm">{l s='The new configuration has been saved!' mod='froggytoolbarv2'}</div>
     {/if}
 
-    {$froggytoolbarv2.helper_display}
+    {FroggyDisplaySafeHtml s=$froggytoolbarv2.helper_display}
 

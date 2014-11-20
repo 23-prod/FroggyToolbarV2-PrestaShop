@@ -60,7 +60,7 @@ class FroggyToolbarV2NotificationsHandlerProcessor extends FroggyHookProcessor
 		$notifications['customer'] = $this->getNotificationsByType('customer', Configuration::get('FC_TLB_NOT_CU_'.(int)$cookie_fc->id_employee));
 
 		// Display notifications
-		echo json_encode($notifications);
+		echo Tools::jsonEncode($notifications);
 	}
 
 	public function getNotificationsByType($type, $id_last_element)

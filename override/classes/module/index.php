@@ -19,21 +19,13 @@
  * @license   Unauthorized copying of this file, via any medium is strictly prohibited
  */
 
-/*
- * Construct path
- */
-$config_path = dirname(__FILE__).'/../../config/config.inc.php';
-$module_path = dirname(__FILE__).'/froggytoolbarv2.php';
+header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');
 
-/*
- *  Keep going if config script is found
- */
-if (file_exists($config_path))
-{
-	include($config_path);
-	include($module_path);
-	$froggytoolbar = new FroggyToolbarV2();
-	$froggytoolbar->notificationsHandler();
-}
-else
-	die('ERROR');
+header('Cache-Control: no-store, no-cache, must-revalidate');
+header('Cache-Control: post-check=0, pre-check=0', false);
+header('Pragma: no-cache');
+
+header('Location: ../');
+exit;
+

@@ -27,7 +27,7 @@ class FroggyToolbarV2HookDisplayHeaderProcessor extends FroggyHookProcessor
 		$cookie_fc = new Cookie('psFroggyToolbar');
 
 		// Check if deconnection is asked
-		if (isset($_POST['logout']))
+		if (Tools::getIsset('logout'))
 			$cookie_fc->id_employee = 0;
 
 		// Check cookie employee
@@ -35,13 +35,13 @@ class FroggyToolbarV2HookDisplayHeaderProcessor extends FroggyHookProcessor
 			return '';
 
 		// Set media (different file CSS depending on PrestaShop version)
-		$ps_version = substr(_PS_VERSION_, 0, 3);
-		$this->context->controller->addCSS($this->path.'views/css/font-awesome.min.css', 'all');
-		$this->context->controller->addCSS($this->path.'views/css/froggytoolbar-debug.css', 'all');
-		$this->context->controller->addCSS($this->path.'views/css/froggytoolbar-'.$ps_version.'.css', 'all');
-		$this->context->controller->addCSS($this->path.'views/css/froggytoolbar-'.$ps_version.'-'.$cookie_fc->bo_theme_employee.'.css', 'all');
-		$this->context->controller->addJS($this->path.'views/js/froggytoolbar-jscolor.js');
-		$this->context->controller->addJS($this->path.'views/js/froggytoolbar-debug.js');
-		$this->context->controller->addJS($this->path.'views/js/froggytoolbar.js');
+		$ps_version = Tools::substr(_PS_VERSION_, 0, 3);
+		$this->context->controller->addCSS($this->path.'css/font-awesome.min.css', 'all');
+		$this->context->controller->addCSS($this->path.'css/froggytoolbar-debug.css', 'all');
+		$this->context->controller->addCSS($this->path.'css/froggytoolbar-'.$ps_version.'.css', 'all');
+		$this->context->controller->addCSS($this->path.'css/froggytoolbar-'.$ps_version.'-'.$cookie_fc->bo_theme_employee.'.css', 'all');
+		$this->context->controller->addJS($this->path.'js/froggytoolbar-jscolor.js');
+		$this->context->controller->addJS($this->path.'js/froggytoolbar-debug.js');
+		$this->context->controller->addJS($this->path.'js/froggytoolbar.js');
 	}
 }
