@@ -19,9 +19,11 @@
  *}
 
 
-    {if $froggytoolbarv2.form_result == true}
-        <div class="conf confirm">{l s='The new configuration has been saved!' mod='froggytoolbarv2'}</div>
-    {/if}
+{if $froggytoolbarv2.form_result === true}
+    <div class="conf confirm">{l s='The new configuration has been saved!' mod='froggytoolbarv2'}</div>
+{elseif $froggytoolbarv2.form_result != ''}
+    <p class="error"><strong>{$froggytoolbarv2.form_result|escape:'html':'UTF-8'}</strong></p>
+{/if}
 
-    {FroggyDisplaySafeHtml s=$froggytoolbarv2.helper_display}
+{FroggyDisplaySafeHtml s=$froggytoolbarv2.helper_display}
 

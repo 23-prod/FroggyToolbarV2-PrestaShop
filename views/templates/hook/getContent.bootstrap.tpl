@@ -20,8 +20,10 @@
 
 <h2 align="center">{l s='Froggy Advanced Toolbar' mod='froggytoolbarv2'}</h2>
 
-{if $froggytoolbarv2.form_result == true}
+{if $froggytoolbarv2.form_result === true}
     <div class="module_confirmation conf confirm alert alert-success">{l s='The new configuration has been saved!' mod='froggytoolbarv2'}</div>
+{elseif $froggytoolbarv2.form_result != ''}
+    <div class="alert alert-danger"><p class="error"><strong>{$froggytoolbarv2.form_result|escape:'html':'UTF-8'}</strong></p></div>
 {/if}
 
 {FroggyDisplaySafeHtml s=$froggytoolbarv2.helper_display}

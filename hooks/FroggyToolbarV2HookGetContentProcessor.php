@@ -110,8 +110,7 @@ class FroggyToolbarV2HookGetContentProcessor extends FroggyHookProcessor
 			$menu->add();
 			return true;
 		} catch (Exception $e) {
-			die($e->getMessage());
-			return false;
+			return $e->getMessage();
 		}
 		return false;
 	}
