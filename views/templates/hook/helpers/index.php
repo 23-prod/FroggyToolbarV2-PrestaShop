@@ -19,27 +19,13 @@
  * @license   Unauthorized copying of this file, via any medium is strictly prohibited
  */
 
-/**
- * Backward function compatibility
- * Need to be called for each module in 1.4
- */
+header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
+header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');
 
-/**
- * Get out if the context is already defined
- */
-if (!in_array('FroggyContext', get_declared_classes()))
-	require_once(dirname(__FILE__).'/FroggyContext.php');
+header('Cache-Control: no-store, no-cache, must-revalidate');
+header('Cache-Control: post-check=0, pre-check=0', false);
+header('Pragma: no-cache');
 
-/**
- * If not under an object we don't have to set the context
- */
-$var = 'this';
-if (!isset($$var))
-	return;
+header('Location: ../');
+exit;
 
-/**
- * Set variables
- */
-global $currentIndex;
-$$var->context = FroggyContext::getContext();
-$$var->smarty = $$var->context->smarty;

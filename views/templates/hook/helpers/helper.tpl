@@ -17,12 +17,12 @@
 *  @copyright  2013-2014 Froggy Commerce
 *}
 
-<form enctype="multipart/form-data" method="POST" action="{$froggyhelper.form_url}">
+<form enctype="multipart/form-data" method="POST" action="{$froggyhelper.form_url|escape:'html':'UTF-8'}">
 
-	<input type="hidden" value="1" name="{$froggyhelper.module_name}-{$froggyhelper.configuration.key}-submit">
+	<input type="hidden" value="1" name="{$froggyhelper.module_name|escape:'html':'UTF-8'}-{$froggyhelper.configuration.key|escape:'html':'UTF-8'}-submit">
 
-	<fieldset id="fieldset-{$froggyhelper.module_name}-{$froggyhelper.configuration.key}">
-		<legend><img alt="{$froggyhelper.configuration.label}" src="../modules/{$froggyhelper.module_name}/logo.gif"> {$froggyhelper.configuration.label}</legend>
+	<fieldset id="fieldset-{$froggyhelper.module_name|escape:'html':'UTF-8'}-{$froggyhelper.configuration.key|escape:'html':'UTF-8'}">
+		<legend><img alt="{$froggyhelper.configuration.label|escape:'html':'UTF-8'}" src="../modules/{$froggyhelper.module_name|escape:'html':'UTF-8'}/logo.gif"> {$froggyhelper.configuration.label|escape:'html':'UTF-8'}</legend>
 
         {if isset($froggyhelper.configuration.list)}
             {include file="{$froggyhelper.templates_dir}/helper-list.tpl"}
