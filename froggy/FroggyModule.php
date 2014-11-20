@@ -77,7 +77,7 @@ class FroggyModule extends Module
 
 		// Define module configuration url
 		if (isset($this->context->employee->id))
-			$this->configuration_url = 'index.php?controller=AdminModules&token='.Tools::getAdminTokenLite('AdminModules').'&configure='.$this->name.'&module_name='.$this->name;
+			$this->configuration_url = 'index.php?tab=AdminModules&controller=AdminModules&token='.Tools::getAdminTokenLite('AdminModules').'&configure='.$this->name.'&module_name='.$this->name;
 	}
 
 	/**
