@@ -25,11 +25,11 @@
 		<legend><img alt="{$froggyhelper.configuration.label}" src="../modules/{$froggyhelper.module_name}/logo.gif"> {$froggyhelper.configuration.label}</legend>
 
         {if isset($froggyhelper.configuration.list)}
-            {include file='./helper-list.tpl'}
+            {include file="{$froggyhelper.templates_dir}/helper-list.tpl"}
         {/if}
 
         {if isset({$froggyhelper.configuration.form})}
-            {include file='./helper-form.tpl'}
+            {include file="{$froggyhelper.templates_dir}/helper-form.tpl"}
         {/if}
 
 	</fieldset>
