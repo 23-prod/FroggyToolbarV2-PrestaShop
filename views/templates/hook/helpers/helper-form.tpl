@@ -21,9 +21,9 @@
         {foreach from=$froggyhelper.configuration.form key=form_key item=form}
             <h3>{$form.label}</h3>
             {foreach from=$form.fields item=field}
-                <div class="form-group">
-                    <label class="control-label col-lg-3" for="{$field.name}"> {$field.label}</label>
-                    <div class="col-lg-9 ">
+				<label for="{$field.name}"> {$field.label}</label>
+				<div class="margin-form">
+                    <div>
                         {if $field.type eq 'radio'}
                             <span class="switch prestashop-switch fixed-width-lg">
                                     <input type="radio" name="{$field.name}" id="{$field.name}_on" value="1" {if isset($field.value) && $field.value eq 1}checked="checked"{/if} />
@@ -50,8 +50,8 @@
             {/foreach}
         {/foreach}
 
-		<div class="panel-footer">
-			<button class="btn btn-default pull-right" name="{$froggyhelper.module_name}-submit" id="{$froggyhelper.module_name}-form-submit-btn" value="1" type="submit">
-				<i class="process-icon-save"></i> {l s='Save' mod=$froggyhelper.module_name}
+		<div class="margin-form">
+			<button class="button" name="{$froggyhelper.module_name}-submit" id="{$froggyhelper.module_name}-form-submit-btn" value="1" type="submit">
+				 {l s='Save' mod=$froggyhelper.module_name}
 			</button>
 		</div>

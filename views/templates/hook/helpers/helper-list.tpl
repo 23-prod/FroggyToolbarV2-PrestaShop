@@ -22,7 +22,7 @@
     <thead>
     <tr>
         {foreach from=$froggyhelper.configuration.list.labels key=field item=label}
-            <th>{$label}</th>
+            <th style="width:100px">{$label}</th>
         {/foreach}
         <th><div class="btn-group pull-right">{l s='Actions' mod=$froggyhelper.module_name}</div></th>
     </tr>
