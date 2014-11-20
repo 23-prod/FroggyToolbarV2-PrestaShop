@@ -39,7 +39,7 @@ html{margin-top:30px!important}
 #froggy-toolbar .fc-toolbar-list-link li:hover{background:#090909}
 #froggy-toolbar .fc-toolbar-list-link li.toolbar-link>a{display:block;height:100%;padding:0 12px;;text-decoration:none}
 #froggy-toolbar .fc-toolbar-list-link li a .fc-toolbar-icon-plus{display:inline-block;width:12px;height:12px;margin:10px 6px 0 0;background:url(../img/sprite-fc-toolbar.png) 0 0;float:left}
-#froggy-toolbar .fc-toolbar-list-link li .froggy-toolbar-link{display:inline-block;width:16px;height:14px;margin:10px 0 0 0;background:url( 'http://media.froggy-commerce.com/fc-toolbar-logo.png' );float:left}
+#froggy-toolbar .fc-toolbar-list-link li .froggy-toolbar-link{display:inline-block;width:16px;height:14px;margin:10px 0 0 0;background:url( '../img/fc-toolbar-logo.png' );float:left}
 /*Menu*/
 #froggy-toolbar .fc-toolbar-submenu{display:none;background:#fff;position:absolute;box-shadow:0 6px 12px rgba(0, 0, 0, 0.176)}
 #froggy-toolbar .fc-toolbar-submenu a{font-weight:normal;color:#333!important}
