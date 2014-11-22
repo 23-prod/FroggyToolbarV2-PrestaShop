@@ -18,7 +18,6 @@
  * @license   Unauthorized copying of this file, via any medium is strictly prohibited
  *}
 
-
 {if $froggytoolbarv2.form_result === true}
     <div class="conf confirm">{l s='The new configuration has been saved!' mod='froggytoolbarv2'}</div>
 {elseif $froggytoolbarv2.form_result != ''}
