@@ -23,7 +23,6 @@
 		<li class="froggy-link-toolbar first-floor toolbar-link">
 			<a><span class="froggy-toolbar-link"></span></a>
 			<ul class="fc-toolbar-submenu">
-				<li><a {$froggytoolbarv2.target_link|escape:'html':'UTF-8'}href="http://www.froggy-commerce.com/">{l s='Froggy Commerce' mod='froggytoolbarv2'}</a></li>
 				<li><a {$froggytoolbarv2.target_link|escape:'html':'UTF-8'}href="http://addons.prestashop.com/">{l s='PrestaShop Addons' mod='froggytoolbarv2'}</a></li>
 				<li><a {$froggytoolbarv2.target_link|escape:'html':'UTF-8'}href="http://www.prestashop.com/forums/">{l s='PrestaShop Forum' mod='froggytoolbarv2'}</a></li>
 			</ul>
