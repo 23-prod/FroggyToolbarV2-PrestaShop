@@ -40,7 +40,7 @@ class FroggyToolbarV2 extends FroggyModule
 		$this->name = 'froggytoolbarv2';
 		$this->author = 'Froggy Commerce';
 		$this->version = '1.0';
-		$this->tab = 'front_office_features';
+		$this->tab = 'administration';
 
 		parent::__construct();
 
