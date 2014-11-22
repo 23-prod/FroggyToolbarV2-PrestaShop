@@ -31,6 +31,9 @@ $module_path = dirname(__FILE__).'/froggytoolbarv2.php';
 if (file_exists($config_path))
 {
 	include($config_path);
+	$controller = new FrontController();
+	$controller->init();
+
 	include($module_path);
 	$froggytoolbar = new FroggyToolbarV2();
 	$froggytoolbar->notificationsHandler();
