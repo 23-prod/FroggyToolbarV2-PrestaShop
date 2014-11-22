@@ -27,6 +27,7 @@ html{margin-top:30px!important}
 #froggy-toolbar li{padding:0!important}
 #froggy-toolbar li a{color:#dadada!important}
 #froggy-toolbar li a:hover{color:#fff!important}
+#froggy-toolbar .fc-toolbar-list-link .fa{margin-right: 8px}
 /*Froggy Tool Bar*/
 
 
@@ -80,9 +81,9 @@ html{margin-top:30px!important}
 #froggy-toolbar .fc-toolbar-box>li{padding:0;height:30px;line-height:30px;float:left}
 #froggy-toolbar .fc-toolbar-box li:hover{background:#4C545D}
 #froggy-toolbar .fc-toolbar-box li a{display:block;padding:0 12px}
-#froggy-toolbar .fc-toolbar-box li.display-box.fc-toolbar-notification>a{padding-right:21px!important}
+#froggy-toolbar .fc-toolbar-box li.display-box.fc-toolbar-notification>a{padding-right:25px!important}
 #froggy-toolbar .fc-toolbar-box li.display-box a .fc-toolbar-notification-number{display:none}
-#froggy-toolbar .fc-toolbar-box li.display-box.fc-toolbar-notification a .fc-toolbar-notification-number{display:block;color:#fff;font-size:10px;position:absolute;top:-7px;right:-21px;height:12px;width:26px;line-height:12px}
+#froggy-toolbar .fc-toolbar-box li.display-box.fc-toolbar-notification a .fc-toolbar-notification-number{display:block;color:#fff;font-size:10px;position:absolute;top:0;right:-1px;height:12px;width:26px;line-height:12px;font-family: arial, sans-serif}
 #froggy-toolbar .fc-toolbar-box li .fc-toolbar-title-info{display:block;width:100%;font-size:13px;line-height:24px;color:#fff;border-bottom:1px solid #DEDEDE}
 #froggy-toolbar .fc-toolbar-box li.display-box.giant ul{padding-bottom:5px;border-bottom:1px solid #DEDEDE}
 #froggy-toolbar .fc-toolbar-box li .fc-box-content p{padding:0;margin:0}
