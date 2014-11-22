@@ -66,7 +66,7 @@ $_MODULE['<{froggytoolbarv2}prestashop>displayfooter_8a5c480b139e04f88097b462e44
 $_MODULE['<{froggytoolbarv2}prestashop>displayfooter_3ac705f2acd51a4613f9188c05c91d0d'] = 'Valider';
 $_MODULE['<{froggytoolbarv2}prestashop>displayfooter_ea117d7e3b2beb05827f5ed8511268c0'] = 'Voir les messages';
 $_MODULE['<{froggytoolbarv2}prestashop>displayfooter_71948aa4f6e12cdaa5e2e63a5eb8f142'] = 'Plus d\'infos';
-$_MODULE['<{froggytoolbarv2}prestashop>displayfooter_ddd97e7028767f26aaf341d0534842f7'] = 'Désactiver le mode debug';
+$_MODULE['<{froggytoolbarv2}prestashop>displayfooter_ddd97e7028767f26aaf341d0534842f7'] = 'Desactiver le mode debug';
 $_MODULE['<{froggytoolbarv2}prestashop>getcontent.bootstrap_fcda702acf6b8b6067844076900083b8'] = 'Froggy barre d\'outils avancée';
 $_MODULE['<{froggytoolbarv2}prestashop>getcontent.bootstrap_4725c2b6db34f755b89b741c1d45bc71'] = 'La nouvelle configuration a été sauvegardée !';
 $_MODULE['<{froggytoolbarv2}prestashop>getcontent_4725c2b6db34f755b89b741c1d45bc71'] = 'La nouvelle configuration a été sauvegardée !';
