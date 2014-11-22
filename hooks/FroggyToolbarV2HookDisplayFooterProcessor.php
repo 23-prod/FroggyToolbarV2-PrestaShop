@@ -58,6 +58,7 @@ class FroggyToolbarV2HookDisplayFooterProcessor extends FroggyHookProcessor
 			'modules_displayed' => (isset(Module::$modules_displayed) ? Module::$modules_displayed : array()),
 			'translation_link' => _PS_BASE_URL_.__PS_BASE_URI__.$translation_link,
 			'search_link' => _PS_BASE_URL_.__PS_BASE_URI__.$search_link,
+			'general_configuration_link' => _PS_BASE_URL_.__PS_BASE_URI__.$configuration_link,
 			'configuration_link' => _PS_BASE_URL_.__PS_BASE_URI__.$configuration_link.'&configure=froggytoolbarv2&module_name=froggytoolbarv2',
 			'custom_menu' => FroggyToolbarCustomMenu::getEmployeeCustomMenu((int)$this->context->employee->id),
 		);
