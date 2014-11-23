@@ -46,6 +46,7 @@ class FroggyToolbarV2 extends FroggyModule
 
 		$this->displayName = $this->l('Froggy Advanced Toolbar');
 		$this->description = $this->l('Display an admin advanced toolbar on front office');
+		$this->module_key = '81bc27c56c438058704732c086d0f7a6';
 	}
 
 	/**
