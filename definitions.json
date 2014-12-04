@@ -1,6 +1,6 @@
 {
 	"tab" : "administration",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"need_instance": 0,
 
 	"hooks": { "all" : [ "Footer", "BackOfficeHeader", "Header" ] },

@@ -29,7 +29,7 @@ $(document).ready(function() {
 function froggyToolbarRefresh(recursive)
 {
     if (froggytoolbar_ps_version == '1.4')
-        froggyToolbarCheckLogoutOnPS14(recursive);
+        froggyToolbarCheckLogoutOnPS14();
     froggyToolbarRefreshNotification(recursive);
     froggyToolbarViewNotification();
 }
@@ -68,7 +68,9 @@ function froggyToolbarRefreshNotification(recursive)
     if (recursive == 1)
     {
         setTimeout(function() {
-            froggyToolbarRefreshNotification();
+            froggyToolbarRefreshNotification(recursive);
+			if (froggytoolbar_ps_version == '1.4')
+				froggyToolbarCheckLogoutOnPS14();
         }, froggytoolbar_notification_timer);
     }
 }
@@ -163,7 +165,7 @@ function froggyToolbarCheckLogoutOnPS14(recursive)
 {
     // Make ajax request compliant with jquery 1.4
     $.ajax({
-        url: froggytoolbar_notification_url,
+        url: froggytoolbar_test_authentification_url,
         data: { ajaxProductManufacturers: '1' },
         complete: function(jqXHR, textStatus) {
             try { var json = $.parseJSON(jqXHR.responseText); }

@@ -2,7 +2,7 @@
 <module>
 	<name>froggytoolbarv2</name>
 	<displayName><![CDATA[Barre d'outils avancée Froggy]]></displayName>
-	<version><![CDATA[1.0.0]]></version>
+	<version><![CDATA[1.0.1]]></version>
 	<description><![CDATA[Affiche une barre d'outils avancée sur le front office]]></description>
 	<author><![CDATA[Froggy Commerce]]></author>
 	<tab><![CDATA[administration]]></tab>
