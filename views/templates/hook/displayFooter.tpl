@@ -182,7 +182,7 @@
     var froggytoolbar_notification_timer = ({$froggytoolbarv2.timer|intval} * 1000);
     {if $froggytoolbarv2.ps_version eq '1.4'}
         var froggytoolbar_notification_url = '{$base_dir|escape:'html':'UTF-8'}/modules/froggytoolbarv2/ajax.php';
-	    var froggytoolbar_test_authentification_url = '{$base_dir|escape:'html':'UTF-8'}{$froggytoolbar.admin_dir|escape:'html':'UTF-8'}ajax.php';
+	    var froggytoolbar_test_authentification_url = '{$base_dir|escape:'html':'UTF-8'}{$froggytoolbarv2.admin_dir|escape:'html':'UTF-8'}ajax.php';
     {else}
         var froggytoolbar_notification_url = '{$base_dir|escape:'html':'UTF-8'}{$froggytoolbarv2.admin_dir|escape:'html':'UTF-8'}ajax.php';
     {/if}
