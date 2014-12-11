@@ -35,6 +35,9 @@ class Module extends ModuleCore
 			// Check cookie employee
 			if ((int)$cookie_fc->id_employee > 0)
 			{
+				if (!class_exists('FroggyModule', false)) require_once _PS_MODULE_DIR_.'/froggytoolbarv2/froggy/FroggyModule.php';
+				if (!class_exists('FroggyContext', false)) require_once _PS_MODULE_DIR_.'/froggytoolbarv2/froggy/FroggyContext.php';
+
 				$moduleName = basename(dirname($file), '.php');
 				$module = new $moduleName();
 
