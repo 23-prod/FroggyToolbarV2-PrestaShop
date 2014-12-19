@@ -33,7 +33,7 @@ class Module extends ModuleCore
 			$cookie_fc = new Cookie('psFroggyToolbar');
 
 			// Check cookie employee
-			if ((int)$cookie_fc->id_employee > 0)
+			if ((int)$cookie_fc->id_employee > 0 && strpos($_SERVER['REQUEST_URI'], 'ajax') === false)
 			{
 				$configuration_link = '';
 				$token = Tools::getAdminToken('AdminTranslations'.(int)Tab::getIdFromClassName('AdminTranslations').(int)$cookie_fc->id_employee);

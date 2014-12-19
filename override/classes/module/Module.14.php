@@ -33,7 +33,7 @@ class Module extends ModuleCore
 			$cookie_fc = new Cookie('psFroggyToolbar');
 
 			// Check cookie employee
-			if ((int)$cookie_fc->id_employee > 0)
+			if ((int)$cookie_fc->id_employee > 0 && strpos($_SERVER['REQUEST_URI'], 'ajax') === false)
 			{
 				if (!class_exists('FroggyModule', false)) require_once _PS_MODULE_DIR_.'/froggytoolbarv2/froggy/FroggyModule.php';
 				if (!class_exists('FroggyContext', false)) require_once _PS_MODULE_DIR_.'/froggytoolbarv2/froggy/FroggyContext.php';
