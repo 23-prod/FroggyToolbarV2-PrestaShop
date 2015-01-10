@@ -35,16 +35,21 @@ class Module extends ModuleCore
 			// Check cookie employee
 			if ((int)$cookie_fc->id_employee > 0 && strpos($_SERVER['REQUEST_URI'], 'ajax') === false)
 			{
-				$configuration_link = '';
-				$token = Tools::getAdminToken('AdminTranslations'.(int)Tab::getIdFromClassName('AdminTranslations').(int)$cookie_fc->id_employee);
-				$translation_link = Configuration::get('FC_TLB_ADMIN_DIR').'index.php?controller=AdminTranslations&token='.$token.'&type=modules&lang='.Language::getIsoById((int)Context::getContext()->language->id).'#'.$this->name;
-				if (method_exists($this, 'getContent'))
+				// Check if template is not JS
+				$template_type = explode('.', $template);
+				$template_type = $template_type[count($template_type) - 1];
+				if ($template_type != 'js')
 				{
-					$token = Tools::getAdminToken('AdminModules'.(int)Tab::getIdFromClassName('AdminModules').(int)$cookie_fc->id_employee);
-					$configuration_link = Configuration::get('FC_TLB_ADMIN_DIR').'index.php?controller=AdminModules&token='.$token.'&configure='.$this->name.'&module_name='.$this->name;
-					Module::$modules_displayed[$this->name] = array('name' => $this->name, 'display_name' => $this->displayName, 'configuration_link' => $configuration_link, 'translation_link' => $translation_link);
-				}
-				$result = '<section class="froggytoolbar-debug-module-block">
+					$configuration_link = '';
+					$token = Tools::getAdminToken('AdminTranslations'.(int)Tab::getIdFromClassName('AdminTranslations').(int)$cookie_fc->id_employee);
+					$translation_link = Configuration::get('FC_TLB_ADMIN_DIR').'index.php?controller=AdminTranslations&token='.$token.'&type=modules&lang='.Language::getIsoById((int)Context::getContext()->language->id).'#'.$this->name;
+					if (method_exists($this, 'getContent'))
+					{
+						$token = Tools::getAdminToken('AdminModules'.(int)Tab::getIdFromClassName('AdminModules').(int)$cookie_fc->id_employee);
+						$configuration_link = Configuration::get('FC_TLB_ADMIN_DIR').'index.php?controller=AdminModules&token='.$token.'&configure='.$this->name.'&module_name='.$this->name;
+						Module::$modules_displayed[$this->name] = array('name' => $this->name, 'display_name' => $this->displayName, 'configuration_link' => $configuration_link, 'translation_link' => $translation_link);
+					}
+					$result = '<section class="froggytoolbar-debug-module-block">
 					<span class="froggytoolbar-debug-module-name">
 						<strong>'.(empty($this->displayName) ? $this->name : $this->displayName).'</strong>: Template
 						<span title="'.dirname($file).'/'.$template.'">'.$template.'</span>
@@ -52,7 +57,8 @@ class Module extends ModuleCore
 						<a target="_blank" href="'._PS_BASE_URL_.__PS_BASE_URI__.$translation_link.'"><span class="fa fa-globe" title="Translate"></span></a>
 					</span>
 					'.$result.
-					'</section>';
+						'</section>';
+				}
 			}
 		}
 

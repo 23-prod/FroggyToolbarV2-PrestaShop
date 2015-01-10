@@ -33,3 +33,4 @@
 .froggytoolbar-debug-container button.froggytoolbar-debug-button:hover{cursor:pointer;background: #ffffff}
 .froggytoolbar-debug-container button.froggytoolbar-debug-button:active{font-style:italic}
 .froggytoolbar-debug-module-name{padding:2px;margin:2px;display:inline-block;border: 1px solid red}
+.froggytoolbar-debug-module-name{display:none}
