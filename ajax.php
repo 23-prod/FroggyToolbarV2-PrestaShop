@@ -22,21 +22,20 @@
 /*
  * Construct path
  */
-$config_path = dirname(__FILE__).'/../../config/config.inc.php';
-$module_path = dirname(__FILE__).'/froggytoolbarv2.php';
+$config_path = dirname(__FILE__) . '/../../config/config.inc.php';
+$module_path = dirname(__FILE__) . '/froggytoolbarv2.php';
 
 /*
  *  Keep going if config script is found
  */
-if (file_exists($config_path))
-{
-	include($config_path);
-	$controller = new FrontController();
-	$controller->init();
+if (file_exists($config_path)) {
+    include($config_path);
+    $controller = new FrontController();
+    $controller->init();
 
-	include($module_path);
-	$froggytoolbar = new FroggyToolbarV2();
-	$froggytoolbar->notificationsHandler();
+    include($module_path);
+    $froggytoolbar = new FroggyToolbarV2();
+    $froggytoolbar->notificationsHandler();
+} else {
+    die('ERROR');
 }
-else
-	die('ERROR');

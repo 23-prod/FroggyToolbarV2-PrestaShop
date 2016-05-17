@@ -21,27 +21,29 @@
 
 class FroggyToolbarV2HookDisplayHeaderProcessor extends FroggyHookProcessor
 {
-	public function run()
-	{
-		// Load fc cookie (using our own cookie for compatibility 1.4 / 1.5 / 1.6)
-		$cookie_fc = new Cookie('psFroggyToolbar');
+    public function run()
+    {
+        // Load fc cookie (using our own cookie for compatibility 1.4 / 1.5 / 1.6)
+        $cookie_fc = new Cookie('psFroggyToolbar');
 
-		// Check if deconnection is asked
-		if (Tools::getIsset('logout'))
-			$cookie_fc->id_employee = 0;
+        // Check if deconnection is asked
+        if (Tools::getIsset('logout')) {
+            $cookie_fc->id_employee = 0;
+        }
 
-		// Check cookie employee
-		if ((int)$cookie_fc->id_employee < 1)
-			return '';
+        // Check cookie employee
+        if ((int)$cookie_fc->id_employee < 1) {
+            return '';
+        }
 
-		// Set media (different file CSS depending on PrestaShop version)
-		$ps_version = Tools::substr(_PS_VERSION_, 0, 3);
-		$this->context->controller->addCSS($this->path.'css/font-awesome.min.css', 'all');
-		$this->context->controller->addCSS($this->path.'css/froggytoolbar-debug.css', 'all');
-		$this->context->controller->addCSS($this->path.'css/froggytoolbar-'.$ps_version.'.css', 'all');
-		$this->context->controller->addCSS($this->path.'css/froggytoolbar-'.$ps_version.'-'.$cookie_fc->bo_theme_employee.'.css', 'all');
-		$this->context->controller->addJS($this->path.'js/froggytoolbar-jscolor.js');
-		$this->context->controller->addJS($this->path.'js/froggytoolbar-debug.js');
-		$this->context->controller->addJS($this->path.'js/froggytoolbar.js');
-	}
+        // Set media (different file CSS depending on PrestaShop version)
+        $ps_version = Tools::substr(_PS_VERSION_, 0, 3);
+        $this->context->controller->addCSS($this->path . 'css/font-awesome.min.css', 'all');
+        $this->context->controller->addCSS($this->path . 'css/froggytoolbar-debug.css', 'all');
+        $this->context->controller->addCSS($this->path . 'css/froggytoolbar-' . $ps_version . '.css', 'all');
+        $this->context->controller->addCSS($this->path . 'css/froggytoolbar-' . $ps_version . '-' . $cookie_fc->bo_theme_employee . '.css', 'all');
+        $this->context->controller->addJS($this->path . 'js/froggytoolbar-jscolor.js');
+        $this->context->controller->addJS($this->path . 'js/froggytoolbar-debug.js');
+        $this->context->controller->addJS($this->path . 'js/froggytoolbar.js');
+    }
 }

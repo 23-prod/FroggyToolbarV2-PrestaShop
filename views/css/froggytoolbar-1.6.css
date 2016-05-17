@@ -38,8 +38,8 @@ html{margin-top:30px!important}
 #froggy-toolbar .fc-toolbar-list-link li.toolbar-link{line-height:37px;height:36px;margin:0;padding:0;float:left}
 #froggy-toolbar .fc-toolbar-list-link li:hover{background:#090909}
 #froggy-toolbar .fc-toolbar-list-link li.toolbar-link>a{display:block;height:100%;padding:0 12px;;text-decoration:none}
-#froggy-toolbar .fc-toolbar-list-link li a .fc-toolbar-icon-plus{display:inline-block;width:12px;height:12px;margin:10px 6px 0 0;background:url(../img/sprite-fc-toolbar.png) 0 0;float:left}
-#froggy-toolbar .fc-toolbar-list-link li .froggy-toolbar-link{display:inline-block;width:16px;height:14px;margin:10px 0 0 0;background:url( '../img/fc-toolbar-logo.png' );float:left}
+#froggy-toolbar .fc-toolbar-list-link li a .fc-toolbar-icon-plus{display:inline-block;width:12px;height:12px;margin:10px 6px 0 0;background:url(../views/img/sprite-fc-toolbar.png) 0 0;float:left}
+#froggy-toolbar .fc-toolbar-list-link li .froggy-toolbar-link{display:inline-block;width:16px;height:14px;margin:10px 0 0 0;background:url('../views/img/fc-toolbar-logo.png');float:left}
 /*Menu*/
 #froggy-toolbar .fc-toolbar-submenu{display:none;background:#fff;position:absolute;box-shadow:0 6px 12px rgba(0, 0, 0, 0.176)}
 #froggy-toolbar .fc-toolbar-submenu a{font-weight:normal;color:#333!important}
@@ -54,13 +54,13 @@ html{margin-top:30px!important}
 /*edit*/
 
 
-#froggy-toolbar .fc-toolbar-list-link li a .fc-toolbar-edit-page{display:inline-block;width:12px;height:13px;margin:10px 6px 0 0;background:url(../img/sprite-fc-toolbar.png) 0 -14px;float:left}
+#froggy-toolbar .fc-toolbar-list-link li a .fc-toolbar-edit-page{display:inline-block;width:12px;height:13px;margin:10px 6px 0 0;background:url(../views/img/sprite-fc-toolbar.png) 0 -14px;float:left}
 
 /*edit*/
 
 /*back office link*/
 
-#froggy-toolbar .fc-toolbar-list-link li a .fc-toolbar-backoffice{display:inline-block;width:20px;height:13px;margin:10px 6px 0 0;background:url(../img/sprite-fc-toolbar.png) 0 -43px;float:left}
+#froggy-toolbar .fc-toolbar-list-link li a .fc-toolbar-backoffice{display:inline-block;width:20px;height:13px;margin:10px 6px 0 0;background:url(../views/img/sprite-fc-toolbar.png) 0 -43px;float:left}
 
 /*back office link*/
 
@@ -106,18 +106,18 @@ html{margin-top:30px!important}
 #froggy-toolbar .fc-toolbar-noti-label{margin:8px 12px 0;line-height:20px}
 
 /*Client box*/
-#froggy-toolbar .fc-toolbar-box li a .fc-toolbar-icon-clients{display:inline-block;position:relative;width:16px;height:12px;margin:10px 0 0 0;background:url(../img/sprite-fc-toolbar.png) 0 -57px;float:left}
+#froggy-toolbar .fc-toolbar-box li a .fc-toolbar-icon-clients{display:inline-block;position:relative;width:16px;height:12px;margin:10px 0 0 0;background:url(../views/img/sprite-fc-toolbar.png) 0 -57px;float:left}
 
 /*Client box*/
 
 /*Client message*/
 
-#froggy-toolbar .fc-toolbar-box li a .fc-toolbar-icon-message{display:inline-block;position:relative;width:16px;height:14px;margin:10px 0 0 0;background:url(../img/sprite-fc-toolbar.png) 0 -29px;float:left}
+#froggy-toolbar .fc-toolbar-box li a .fc-toolbar-icon-message{display:inline-block;position:relative;width:16px;height:14px;margin:10px 0 0 0;background:url(../views/img/sprite-fc-toolbar.png) 0 -29px;float:left}
 /*Client message*/
 
 /*new order*/
 
-#froggy-toolbar .fc-toolbar-box li a .fc-toolbar-icon-order{display:inline-block;position:relative;width:15px;height:13px;margin:10px 0 0 0;background:url(../img/sprite-fc-toolbar.png) 0 -71px;float:left}
+#froggy-toolbar .fc-toolbar-box li a .fc-toolbar-icon-order{display:inline-block;position:relative;width:15px;height:13px;margin:10px 0 0 0;background:url(../views/img/sprite-fc-toolbar.png) 0 -71px;float:left}
 
 
 /*new order*/

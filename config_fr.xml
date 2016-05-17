@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <module>
 	<name>froggytoolbarv2</name>
-	<displayName><![CDATA[Barre d'outils avancée Froggy]]></displayName>
+	<displayName><![CDATA[Froggy barre d&#039;outils avanc&eacute;e]]></displayName>
 	<version><![CDATA[1.0.5]]></version>
-	<description><![CDATA[Affiche une barre d'outils avancée sur le front office]]></description>
+	<description><![CDATA[Affiche une barre d&#039;outils avanc&eacute;e sur le front office]]></description>
 	<author><![CDATA[Froggy Commerce]]></author>
 	<tab><![CDATA[administration]]></tab>
 	<is_configurable>1</is_configurable>

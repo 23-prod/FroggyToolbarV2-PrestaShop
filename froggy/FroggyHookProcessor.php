@@ -19,23 +19,29 @@
  * @license   Unauthorized copying of this file, via any medium is strictly prohibited
  */
 
-class FroggyToolbarV2HookDisplayBackOfficeHeaderProcessor extends FroggyHookProcessor
+/*
+ * Security
+ */
+defined('_PS_VERSION_') || require dirname(__FILE__).'/index.php';
+
+abstract class FroggyHookProcessor
 {
-    public function run()
+    public $module;
+    public $context;
+    public $path;
+    public $smarty;
+    public $params;
+
+    /**
+     * @param FroggyModule $module
+     * @param array $args
+     */
+    public function __construct($args)
     {
-        // Load employee
-        $employee = new Employee((int)$this->params['cookie']->id_employee);
-
-        // Set cookie froggy for front
-        $cookie_fc = new Cookie('psFroggyToolbar');
-        $cookie_fc->id_employee = $employee->id;
-        $cookie_fc->bo_theme_employee = $employee->bo_theme;
-
-        // Check if admin directory has changed, if yes, we update it
-        $admin_dir = explode('/', dirname($_SERVER['PHP_SELF']));
-        $admin_dir = array_pop($admin_dir) . '/';
-        if ($admin_dir != Configuration::get('FC_TLB_ADMIN_DIR')) {
-            Configuration::updateValue('FC_TLB_ADMIN_DIR', $admin_dir);
+        foreach ($args as $key => $value) {
+            if (property_exists($this, $key)) {
+                $this->{$key} = $value;
+            }
         }
     }
 }
